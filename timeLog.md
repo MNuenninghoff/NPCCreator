@@ -25,14 +25,21 @@ to refine my project idea. The Problem Statement was posted to Slack. I wrote so
 project. I defined what qualities I want the program to generate for a base NPC template. I started thinking
 about what screens the application will have.
 # Week 3
-- M:
-- T:
-- W:
-- T:
-- F:
-- S:
-- S:
-- Total:
+- M: 0.75
+- T: 0
+- W: 2
+- T: 1.5
+- F: 2
+- S: 1.5
+- S: 0.5
+- Total: 8.25
+
+This week, for the project I worked on getting everything set for checkpoint 1. I already had done most of the work
+for the user stories and the problem statement, so mostly this consisted of polishing things up, drawing out 
+screen designs, and writing out a project plan timeline.
+Otherwise, I worked on the advent of code puzzle with JUnit and Log4J. I really like Log4J, I can tell it is 
+going to be incredibly useful. I am still getting used to JUnit.
+
 # Week 4
 - M:
 - T:
