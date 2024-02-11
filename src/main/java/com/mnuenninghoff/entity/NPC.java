@@ -18,6 +18,10 @@ public class NPC {
     private String name;
     private int id;
 
+    public NPC() {
+
+    }
+
     /**
      * Gets ability.
      *
