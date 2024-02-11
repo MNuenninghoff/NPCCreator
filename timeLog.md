@@ -41,14 +41,19 @@ Otherwise, I worked on the advent of code puzzle with JUnit and Log4J. I really 
 going to be incredibly useful. I am still getting used to JUnit.
 
 # Week 4
-- M:
-- T:
-- W:
-- T:
-- F:
-- S:
-- S:
-- Total:
+- M: 1
+- T: 0
+- W: 1
+- T: 0
+- F: 0.5
+- S: 4.25
+- S: 1.5
+- Total: 8.25
+
+This week I began to create the various entity classes that the application will require in preparation for creating a 
+draft of my database and a test database. I meant to also create the development and test databases, but it looks like
+that will likely be pushed to next week.
+
 # Week 5
 - M:
 - T:
