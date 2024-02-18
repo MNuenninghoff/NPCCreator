@@ -3,6 +3,8 @@ package com.mnuenninghoff.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Objects;
+
 /**
  * The type Interaction traits.
  */
@@ -22,7 +24,13 @@ public class InteractionTraits {
     public InteractionTraits() {
 
     }
-
+    /**
+     * Instantiates a new Interaction traits with a string interaction trait parameter
+     * @param interactionTraits interaction trait
+     */
+    public InteractionTraits(String interactionTraits) {
+        this.interactionTraits = interactionTraits;
+    }
     /**
      * Gets id.
      *
@@ -66,5 +74,18 @@ public class InteractionTraits {
      */
     public void setInteractionTraits(String interactionTraits) {
         this.interactionTraits = interactionTraits;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        InteractionTraits that = (InteractionTraits) o;
+        return id == that.id && Objects.equals(interactionTraits, that.interactionTraits);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, interactionTraits);
     }
 }
