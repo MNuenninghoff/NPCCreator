@@ -1,10 +1,19 @@
 package com.mnuenninghoff.entity;
 
+import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * The type Interaction traits.
  */
+@Entity(name = "InteractionTraits")
+@Table(name = "Interaction_Traits")
 public class InteractionTraits {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int id;
+    @Column(name = "trait")
     private String interactionTraits;
 
     /**
@@ -12,6 +21,24 @@ public class InteractionTraits {
      */
     public InteractionTraits() {
 
+    }
+
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
