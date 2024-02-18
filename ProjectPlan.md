@@ -1,31 +1,34 @@
 ## Project Plan
 
 # Week 3
- - [ ] Write Project plan
- - [ ] Write user stories, confirm MVP stories meet project objectives
- - [ ] Screen Design for MVP user stories
- - [ ] Update time log
+ - [x] Write Project plan
+ - [x] Write user stories, confirm MVP stories meet project objectives
+ - [x] Screen Design for MVP user stories
+ - [x] Update time log
  
 # Week 4 - Class topic: Hibernate
 Focus: Generate NPC user story
- - [ ] First take on Database design
- - [ ] Create development version of NPC table
- - [ ] Create NPC entity
- - [ ] Create CRUD Class for NPC - NPCDao
- - [ ] Config files for DB connection info (dev and test)
- - [ ] test version of database for unit testing
- - [ ] create unit tests for the NPCDao
- - [ ] Create class for DB connection
- - [ ] Create controller to route to NPC generation
- - [ ] Update time log
+ - [x] First take on Database design
+ - [x] Create development version of NPC table
+ - [x] Create NPC entity
+ - [x] Update time log
  
 # Week 5 - Hibernate
 Focus: JSPs
-- [ ] Create JSPs for each of the screens outlined in screen design
-- [ ] update Weekly time log
+- [x] Config files for DB connection info (dev and test)
+- [x] Complete test database
+- [x] start mapping hibernate annotations
+- [x] Write unit tests for one dao class
+- [x] update Weekly time log
 
 # Week 6 - Deployment to AWS - Checkpoint 2 due next Wed
-Focus: Edit a NPC user story
+Focus: Daos and start JSPs
+- [ ] Create Generic Dao
+- [ ] Unit tests for each Entity Class/Dao
+- [ ] Create JSPs for each of the screens outlined in screen design
+- [ ] test version of database for unit testing
+- [ ] Create class for DB connection
+- [ ] Create controller to route to NPC generation
 - [ ] Create controller to route to NPC editing
 - [ ] Ensure that Log4J is implemented
 

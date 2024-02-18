@@ -55,14 +55,20 @@ draft of my database and a test database. I meant to also create the development
 that will likely be pushed to next week.
 
 # Week 5
-- M:
-- T:
-- W:
-- T:
-- F:
-- S:
-- S:
-- Total:
+- M: 0
+- T: 0
+- W: 0
+- T: 1.5
+- F: 1
+- S: 4.5
+- S: 2
+- Total: 9
+
+This week I built out the test database and added (I think) all of the tables that needed to be created. I also built 
+the InteractionTraitsDao and wrote tests for it. In the upcoming weeks, I need to convert it to a Generic Dao and 
+implement tests for all of the Entity classes. I also still need to add the Hibernate annotations to all of my Entity
+classes. Additionally, I need to start building out the controller classes and the jsps.
+
 # Week 6
 - M:
 - T:
