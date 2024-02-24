@@ -19,7 +19,7 @@ public class InteractionTraits {
     private int id;
     @Column(name = "trait")
     private String interactionTraits;
-    @OneToMany(mappedBy = "interaction_traits", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "interactionTraits", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.EAGER)
     private List<NPC> npcs = new ArrayList<>();
 
     /**
