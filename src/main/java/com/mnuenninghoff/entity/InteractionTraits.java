@@ -3,6 +3,8 @@ package com.mnuenninghoff.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,6 +19,8 @@ public class InteractionTraits {
     private int id;
     @Column(name = "trait")
     private String interactionTraits;
+    @OneToMany(mappedBy = "interaction_traits", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.EAGER)
+    private List<NPC> npcs = new ArrayList<>();
 
     /**
      * Instantiates a new Interaction traits.
@@ -24,13 +28,16 @@ public class InteractionTraits {
     public InteractionTraits() {
 
     }
+
     /**
      * Instantiates a new Interaction traits with a string interaction trait parameter
+     *
      * @param interactionTraits interaction trait
      */
     public InteractionTraits(String interactionTraits) {
         this.interactionTraits = interactionTraits;
     }
+
     /**
      * Gets id.
      *
@@ -38,6 +45,24 @@ public class InteractionTraits {
      */
     public int getId() {
         return id;
+    }
+
+    /**
+     * Gets npcs.
+     *
+     * @return the npcs
+     */
+    public List<NPC> getNpcs() {
+        return npcs;
+    }
+
+    /**
+     * Sets npcs.
+     *
+     * @param npcs the npcs
+     */
+    public void setNpcs(List<NPC> npcs) {
+        this.npcs = npcs;
     }
 
     /**
