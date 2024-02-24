@@ -1,21 +1,41 @@
 package com.mnuenninghoff.entity;
 
+import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * Represents a non player character (NPC)
  *
  * @author Michael Nuenninghoff
  */
+@Entity(name = "NPC")
+@Table(name = "npc")
 public class NPC {
+    @ManyToOne
     private Ability ability;
+    @ManyToOne
     private Appearance appearance;
+    @ManyToOne
     private Bond bond;
+    @ManyToOne
     private Flaw flaw;
+    @ManyToOne
     private InteractionTraits interactionTraits;
+    @ManyToOne
     private Mannerisms mannerisms;
+    @ManyToOne
     private Race race;
+    @ManyToOne
     private Talent talent;
-    private String occupation;
+    @ManyToOne
+    private User user;
+    @Column(name = "description")
+    private String description;
+    @Column(name = "name")
     private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
     public NPC() {
