@@ -47,3 +47,17 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Logs
+*.log
+.logs/*
+
+# Database information
+*.properties
+*.cfg.xml
+*.xml
+*.sql
+.src/main/resources/*.properties
+.src/main/resources/*.cfg.xml
+.src/test/resources/hibernate.cfg.xml
+.src/test/resources/cleandb.sql
