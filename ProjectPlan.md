@@ -23,11 +23,11 @@ Focus: JSPs
 
 # Week 6 - Deployment to AWS - Checkpoint 2 due next Wed
 Focus: Daos and start JSPs
-- [ ] Create Generic Dao
+- [x] Create Generic Dao
 - [ ] Unit tests for each Entity Class/Dao
 - [ ] Create JSPs for each of the screens outlined in screen design
-- [ ] test version of database for unit testing
-- [ ] Create class for DB connection
+- [x] test version of database for unit testing
+- [x] Create class for DB connection
 - [ ] Create controller to route to NPC generation
 - [ ] Create controller to route to NPC editing
 - [ ] Ensure that Log4J is implemented

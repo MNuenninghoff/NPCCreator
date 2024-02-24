@@ -3,6 +3,8 @@ package com.mnuenninghoff.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Objects;
+
 /**
  * Represents a non player character (NPC)
  *
@@ -20,6 +22,7 @@ public class NPC {
     @ManyToOne
     private Flaw flaw;
     @ManyToOne
+    @JoinColumn(name = "interaction_traits")
     private InteractionTraits interactionTraits;
     @ManyToOne
     private Mannerisms mannerisms;
@@ -38,8 +41,47 @@ public class NPC {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
+    /**
+     * Instantiates a new Npc.
+     */
     public NPC() {
 
+    }
+
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
@@ -187,21 +229,21 @@ public class NPC {
     }
 
     /**
-     * Gets occupation.
+     * Gets description.
      *
-     * @return the occupation
+     * @return the description
      */
-    public String getOccupation() {
-        return occupation;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * Sets occupation.
+     * Sets description.
      *
-     * @param occupation the occupation
+     * @param description the description
      */
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
@@ -227,10 +269,23 @@ public class NPC {
      * @return string representing npc
      */
     public String toString() {
-        String npc = "npc: " + occupation + ", name: " + name + ", ability: " + ability + ", appearance: " + appearance
+        String npc = "npc: " + description + ", name: " + name + ", ability: " + ability + ", appearance: " + appearance
                 + ", bond: " + bond + ", flaw: " + flaw + ", interaction traits: " + interactionTraits + "mannerisms: "
                 + mannerisms + "race: " + race + "talent: " + talent;
 
         return npc;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NPC npc = (NPC) o;
+        return id == npc.id && Objects.equals(ability, npc.ability) && Objects.equals(appearance, npc.appearance) && Objects.equals(bond, npc.bond) && Objects.equals(flaw, npc.flaw) && Objects.equals(interactionTraits, npc.interactionTraits) && Objects.equals(mannerisms, npc.mannerisms) && Objects.equals(race, npc.race) && Objects.equals(talent, npc.talent) && Objects.equals(user, npc.user) && Objects.equals(description, npc.description) && Objects.equals(name, npc.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ability, appearance, bond, flaw, interactionTraits, mannerisms, race, talent, user, description, name, id);
     }
 }

@@ -19,8 +19,8 @@ public class InteractionTraits {
     private int id;
     @Column(name = "trait")
     private String interactionTraits;
-    @OneToMany(mappedBy = "interactionTraits", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.EAGER)
-    private List<NPC> npcs = new ArrayList<>();
+//    @OneToMany(mappedBy = "interactionTraits", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.EAGER)
+//    private List<NPC> npcs = new ArrayList<>();
 
     /**
      * Instantiates a new Interaction traits.
@@ -52,20 +52,20 @@ public class InteractionTraits {
      *
      * @return the npcs
      */
-    public List<NPC> getNpcs() {
-        return npcs;
-    }
+//    public List<NPC> getNpcs() {
+//        return npcs;
+//    }
 
     /**
      * Sets npcs.
      *
      * @param npcs the npcs
      */
-    public void setNpcs(List<NPC> npcs) {
-        this.npcs = npcs;
-    }
+//    public void setNpcs(List<NPC> npcs) {
+//        this.npcs = npcs;
+//    }
 
-    /**
+/**
      * Sets id.
      *
      * @param id the id

@@ -25,7 +25,8 @@ Mannerisms, Interaction Traits, Bond, and Flaw**
 - Security/Authentication:
   - AWS Cognito
 - Database
-  - MySQL 8.x
+  - MySQL 8.3
+  - Hibernate ORM Version 6.4.3 Final
 - Web Services consumed using Java
   - ??Mockaroo??
   - ??muna.ironarachne.com name generator??
