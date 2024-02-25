@@ -70,14 +70,21 @@ implement tests for all of the Entity classes. I also still need to add the Hibe
 classes. Additionally, I need to start building out the controller classes and the jsps.
 
 # Week 6
-- M:
-- T:
-- W:
-- T:
-- F:
-- S:
-- S:
-- Total:
+- M: 0
+- T: 0
+- W: 0.5
+- T: 1.5
+- F: 2.5
+- S: 6
+- S: 1.5
+- Total: 12
+
+This week was a "one step forward, two steps backwards" kind of week. On the bright side, it really reinforced the
+importance of test driven development. I wrote all of the entity classes and tried to set up Hibernate many to one 
+relationships, and only then started trying to test things. Unfortunately, I couldn't figure out what was broken, so
+I made a new branch and started rebuilding piece by piece, this time testing after every class to make sure that everything 
+is working as expected. All in all, a good learning experience, if a bit frustrating in the moment. Next week, I definitely
+need to get all of the Entity classes and Hibernate set up so I can start working on the controllers and jsps.
 # Week 7
 - M:
 - T:
