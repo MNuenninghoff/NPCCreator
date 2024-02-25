@@ -17,6 +17,7 @@ public class NPC {
     @JoinColumn(name = "interaction_traits")
     private InteractionTraits interactionTraits;
     @ManyToOne
+    @JoinColumn(name = "ability")
     private Ability ability;
     @Column(name = "description")
     private String description;

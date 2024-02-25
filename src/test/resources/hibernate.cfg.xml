@@ -19,6 +19,7 @@
 
         <mapping class="com.mnuenninghoff.entity.InteractionTraits"/>
         <mapping class="com.mnuenninghoff.entity.NPC"/>
+        <mapping class="com.mnuenninghoff.entity.Ability"/>
 
     </session-factory>
 

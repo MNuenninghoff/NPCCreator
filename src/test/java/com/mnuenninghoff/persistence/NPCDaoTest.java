@@ -17,7 +17,7 @@ class NPCDaoTest {
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
-        database.runSQL("dump3.sql");
+        database.runSQL("dump4.sql");
         npcDao = new GenericDao(NPC.class);
         interactionTraitsDao = new GenericDao(InteractionTraits.class);
     }
