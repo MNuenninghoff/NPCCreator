@@ -16,6 +16,8 @@ public class NPC {
     @ManyToOne
     @JoinColumn(name = "interaction_traits")
     private InteractionTraits interactionTraits;
+    @ManyToOne
+    private Ability ability;
     @Column(name = "description")
     private String description;
     @Column(name = "name")
@@ -30,6 +32,14 @@ public class NPC {
      */
     public NPC() {
 
+    }
+
+    public Ability getAbility() {
+        return ability;
+    }
+
+    public void setAbility(Ability ability) {
+        this.ability = ability;
     }
 
     /**
@@ -105,17 +115,18 @@ public class NPC {
         this.name = name;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NPC npc = (NPC) o;
-        return id == npc.id && Objects.equals(interactionTraits, npc.interactionTraits) && Objects.equals(description, npc.description) && Objects.equals(name, npc.name);
+        return id == npc.id && Objects.equals(interactionTraits, npc.interactionTraits) && Objects.equals(ability, npc.ability) && Objects.equals(description, npc.description) && Objects.equals(name, npc.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(interactionTraits, description, name, id);
+        return Objects.hash(interactionTraits, ability, description, name, id);
     }
 }
 
