@@ -16,16 +16,8 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `ability`
+-- Table structure for table `Interaction_Traits`
 --
-
-DROP TABLE IF EXISTS `ability`;
-
-DROP TABLE IF EXISTS `appearance`;
-
-DROP TABLE IF EXISTS `bond`;
-
-DROP TABLE IF EXISTS `flaw`;
 
 DROP TABLE IF EXISTS `Interaction_Traits`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -34,7 +26,7 @@ CREATE TABLE `Interaction_Traits` (
                                       `id` int NOT NULL AUTO_INCREMENT,
                                       `trait` varchar(25) DEFAULT NULL,
                                       PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,15 +35,13 @@ CREATE TABLE `Interaction_Traits` (
 
 LOCK TABLES `Interaction_Traits` WRITE;
 /*!40000 ALTER TABLE `Interaction_Traits` DISABLE KEYS */;
-INSERT INTO `Interaction_Traits` VALUES (1,'Argumentative'),(2,'Arrogant'),(3,'Blustering'),(4,'Rude'),(5,'Curious'),(6,'Friendly'),(7,'Honest'),(8,'Hot tempered'),(9,'Ponderous'),(10,'Quiet'),(11,'Suspicious');
+INSERT INTO `Interaction_Traits` VALUES (1,'Argumentative'),(2,'Arrogant'),(3,'Blustering'),(4,'Rude'),(5,'Curious'),(6,'Friendly'),(7,'Honest'),(8,'Hot tempered'),(9,'Ponderous'),(10,'Quiet'),(11,'Suspicious'),(12,'Tired');
 /*!40000 ALTER TABLE `Interaction_Traits` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `mannerisms`
+-- Table structure for table `npc`
 --
-
-DROP TABLE IF EXISTS `mannerisms`;
 
 DROP TABLE IF EXISTS `npc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -59,6 +49,8 @@ DROP TABLE IF EXISTS `npc`;
 CREATE TABLE `npc` (
                        `id` int NOT NULL AUTO_INCREMENT,
                        `interaction_traits` int DEFAULT NULL,
+                       `description` varchar(100) DEFAULT NULL,
+                       `name` varchar(50) DEFAULT NULL,
                        PRIMARY KEY (`id`),
                        KEY `interaction_traits_fk` (`interaction_traits`),
                        CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`)
@@ -73,16 +65,14 @@ LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Table structure for table `race`
---
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-DROP TABLE IF EXISTS `race`;
-
-DROP TABLE IF EXISTS `talent`;
-
-DROP TABLE IF EXISTS `user`;
-
-
--- Dump completed on 2024-02-24 11:25:04
+-- Dump completed on 2024-02-24 19:32:52
