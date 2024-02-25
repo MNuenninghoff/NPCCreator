@@ -13,11 +13,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class NPCDaoTest {
 
     GenericDao npcDao;
+    GenericDao interactionTraitsDao;
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
         database.runSQL("dump3.sql");
         npcDao = new GenericDao(NPC.class);
+        interactionTraitsDao = new GenericDao(InteractionTraits.class);
     }
 
     @Test
@@ -45,6 +47,17 @@ class NPCDaoTest {
 
     @Test
     void insert() {
+        // create a new npc
+        NPC newNPC = new NPC();
+        newNPC.setInteractionTraits((InteractionTraits)interactionTraitsDao.getById(1));
+        newNPC.setDescription("armorer");
+        newNPC.setName("Joseph");
+        // insert the newly created npc
+        int id = npcDao.insert(newNPC);
+        // retrieve the newly created npc
+        NPC retrievedNPC = (NPC)npcDao.getById(id);
+        //confirm that the newly created npc equals the inserted npc
+        assertEquals(newNPC, retrievedNPC);
     }
 
     @Test

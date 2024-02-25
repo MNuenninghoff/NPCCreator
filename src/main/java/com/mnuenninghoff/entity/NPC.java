@@ -104,6 +104,19 @@ public class NPC {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NPC npc = (NPC) o;
+        return id == npc.id && Objects.equals(interactionTraits, npc.interactionTraits) && Objects.equals(description, npc.description) && Objects.equals(name, npc.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(interactionTraits, description, name, id);
+    }
 }
 
 
