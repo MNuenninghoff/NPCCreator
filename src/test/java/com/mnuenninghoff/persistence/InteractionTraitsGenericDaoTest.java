@@ -73,6 +73,10 @@ class InteractionTraitsGenericDaoTest {
 
     @Test
     void findByPropertyEqual() {
+        List<InteractionTraits> searchResults = genericInteractionTraitsDao.findByPropertyEqual("interactionTraits", "Friendly");
+        assertEquals(1, searchResults.size());
+        searchResults = genericInteractionTraitsDao.findByPropertyEqual("interactionTraits", "u");
+        assertEquals(0, searchResults.size());
     }
 
     @Test
