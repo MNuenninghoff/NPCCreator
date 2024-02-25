@@ -2,6 +2,8 @@ package com.mnuenninghoff.persistence;
 
 import com.mnuenninghoff.entity.InteractionTraits;
 import com.mnuenninghoff.util.Database;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,6 +13,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class InteractionTraitsDaoTest {
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     InteractionTraitsDao interactionTraitsDao;
 
@@ -24,6 +28,7 @@ class InteractionTraitsDaoTest {
     @Test
     void getById() {
         InteractionTraits retrievedInteractionTraits = interactionTraitsDao.getById(1);
+        logger.debug("retrieved" + retrievedInteractionTraits);
         assertNotNull(retrievedInteractionTraits);
         assertEquals("Argumentative", retrievedInteractionTraits.getInteractionTraits());
     }
