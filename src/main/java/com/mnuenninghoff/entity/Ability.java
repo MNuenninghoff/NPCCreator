@@ -100,7 +100,7 @@ public class Ability {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ability ability1 = (Ability) o;
-        return id == ability1.id && Objects.equals(ability, ability1.ability) && Objects.equals(npcs, ability1.npcs);
+        return id == ability1.id && Objects.equals(ability, ability1.ability);
     }
 
     @Override

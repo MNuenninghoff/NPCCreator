@@ -46,9 +46,20 @@ class AbilityDaoTest {
 
     @Test
     void insert() {
+        Ability newAbility = new Ability("Low Intelligence");
+        int id = abilityDao.insert(newAbility);
+        Ability retrievedAbility = (Ability)abilityDao.getById(id);
+        assertEquals(newAbility, retrievedAbility);
     }
 
     @Test
     void update() {
+        // retrieve ability
+        Ability abilityToUpdate = (Ability)abilityDao.getById(1);
+        // update ability
+        abilityToUpdate.setAbility("Low Constitution");
+        abilityDao.update(abilityToUpdate);
+        // retrieve ability, confirm that it is updated as expected
+        assertEquals(abilityToUpdate, abilityDao.getById(1));
     }
 }
