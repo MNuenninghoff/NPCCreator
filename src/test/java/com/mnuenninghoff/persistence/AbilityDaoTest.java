@@ -5,6 +5,8 @@ import com.mnuenninghoff.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AbilityDaoTest {
@@ -20,6 +22,8 @@ class AbilityDaoTest {
 
     @Test
     void getAll() {
+        List<Ability> abilities = abilityDao.getAll();
+        assertEquals(11, abilities.size());
     }
 
     @Test
