@@ -28,6 +28,9 @@ class AbilityDaoTest {
 
     @Test
     void getById() {
+        Ability retrievedAbility = (Ability)abilityDao.getById(1);
+        assertNotNull(retrievedAbility);
+        assertEquals("High Strength - powerful, brawny", retrievedAbility.getAbility());
     }
 
     @Test
