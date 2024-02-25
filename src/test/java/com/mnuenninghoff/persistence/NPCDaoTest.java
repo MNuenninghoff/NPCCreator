@@ -28,7 +28,11 @@ class NPCDaoTest {
 
     @Test
     void getById() {
-
+        NPC retrievedNPC = (NPC)npcDao.getById(4);
+        assertNotNull(retrievedNPC);
+        assertEquals("Bryan", retrievedNPC.getName());
+        assertEquals("bookseller", retrievedNPC.getDescription());
+        assertEquals("Arrogant", retrievedNPC.getInteractionTraits().getInteractionTraits());
     }
 
     @Test
