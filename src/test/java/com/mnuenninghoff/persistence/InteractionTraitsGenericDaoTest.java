@@ -15,7 +15,7 @@ class InteractionTraitsGenericDaoTest {
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
-        database.runSQL("dump3.sql");
+        database.runSQL("dump4.sql");
         genericInteractionTraitsDao = new GenericDao(InteractionTraits.class);
     }
 
