@@ -68,6 +68,6 @@ class InteractionTraitsDaoTest {
         // get all interaction traits
         List<InteractionTraits> allTraits = interactionTraitsDao.getAll();
         // verify that the size of the list is 11
-        assertEquals(11, allTraits.size());
+        assertEquals(12, allTraits.size());
     }
 }
