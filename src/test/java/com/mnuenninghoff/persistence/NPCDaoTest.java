@@ -37,6 +37,10 @@ class NPCDaoTest {
 
     @Test
     void delete() {
+        npcDao.delete(npcDao.getById(1));
+        assertNull(npcDao.getById(1));
+        List<NPC> npcs = npcDao.getAll();
+        assertEquals(3, npcs.size());
     }
 
     @Test
