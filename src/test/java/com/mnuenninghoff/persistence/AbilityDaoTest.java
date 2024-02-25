@@ -35,6 +35,13 @@ class AbilityDaoTest {
 
     @Test
     void delete() {
+        //delete ability
+        abilityDao.delete(abilityDao.getById(3));
+        //try to retrieve, confirm null
+        assertNull(abilityDao.getById(3));
+        //confirm new size is 10
+        List<Ability> abilities = abilityDao.getAll();
+        assertEquals(10, abilities.size());
     }
 
     @Test
