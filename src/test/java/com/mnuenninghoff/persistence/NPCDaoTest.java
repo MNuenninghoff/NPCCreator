@@ -62,9 +62,22 @@ class NPCDaoTest {
 
     @Test
     void update() {
+        // retrieve a NPC
+        NPC npcToUpdate = (NPC)npcDao.getById(1);
+        // update the NPC
+        npcToUpdate.setName("Bill");
+        npcDao.update(npcToUpdate);
+        // retrieve the updatedNPC
+        NPC updatedNPC = (NPC)npcDao.getById(1);
+        // confirm update happened
+        assertEquals("Bill", updatedNPC.getName());
     }
 
     @Test
     void findByPropertyEqual() {
+        List<NPC> results = npcDao.findByPropertyEqual("name", "Joey");
+        assertEquals(0, results.size());
+        results = npcDao.findByPropertyEqual("interactionTraits", interactionTraitsDao.getById(2));
+        assertEquals(2, results.size());
     }
 }
