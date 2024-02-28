@@ -106,7 +106,7 @@ public class Appearance {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Appearance that = (Appearance) o;
-        return id == that.id && Objects.equals(appearance, that.appearance) && Objects.equals(npcs, that.npcs);
+        return id == that.id && Objects.equals(appearance, that.appearance);
     }
 
     @Override
