@@ -22,6 +22,9 @@ public class NPC {
     @ManyToOne
     @JoinColumn(name = "appearance")
     private Appearance appearance;
+    @ManyToOne
+    @JoinColumn(name = "bond")
+    private Bond bond;
     @Column(name = "description")
     private String description;
     @Column(name = "name")
