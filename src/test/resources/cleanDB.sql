@@ -18,7 +18,7 @@
 --
 -- Table structure for table `ability`
 --
-DROP TABLE IF EXISTS `npc`;
+
 DROP TABLE IF EXISTS `ability`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -61,6 +61,30 @@ LOCK TABLES `appearance` WRITE;
 /*!40000 ALTER TABLE `appearance` DISABLE KEYS */;
 INSERT INTO `appearance` VALUES (1,'Distinctive jewelry: earrings, necklace, circlet, bracelets'),(2,'Piercings'),(3,'Flamboyant or outlandish clothes'),(4,'Formal, clean clothes'),(5,'Ragged, dirty clothes'),(6,'Pronounced scar'),(7,'Missing teeth'),(8,'Missing fingers'),(9,'Unusual eye color (or two different colors)'),(10,'Tattoos'),(11,'Birthmark'),(12,'Unusual skin color'),(13,'Bald'),(14,'Braided beard or hair'),(15,'Unusual hair color'),(16,'Nervous eye twitch'),(17,'Distinctive nose'),(18,'Distinctive posture (crooked or rigid)'),(19,'Exceptionally beautiful'),(20,'Exceptionally ugly');
 /*!40000 ALTER TABLE `appearance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `bond`
+--
+
+DROP TABLE IF EXISTS `bond`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `bond` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `bond` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bond`
+--
+
+LOCK TABLES `bond` WRITE;
+/*!40000 ALTER TABLE `bond` DISABLE KEYS */;
+INSERT INTO `bond` VALUES (1,'Dedicated to fulfilling a personal life goal'),(2,'Protective of close family members'),(3,'Protective of colleagues or compatriots'),(4,'Loyal to a benefactor, patron, or employer'),(5,'Captivated by a romantic interest'),(6,'Drawn to a special place'),(7,'Protective of a sentimental keepsake'),(8,'Protective of a valuable possession'),(9,'Out for revenge');
+/*!40000 ALTER TABLE `bond` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -130,4 +154,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 17:15:17
+-- Dump completed on 2024-02-28 17:42:14
