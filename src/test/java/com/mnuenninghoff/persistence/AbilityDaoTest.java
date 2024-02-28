@@ -16,7 +16,7 @@ class AbilityDaoTest {
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
-        database.runSQL("dump4.sql");
+        database.runSQL("cleanDB.sql");
         abilityDao = new GenericDao<>(Ability.class);
     }
 
