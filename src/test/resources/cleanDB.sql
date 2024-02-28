@@ -16,6 +16,54 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `ability`
+--
+
+DROP TABLE IF EXISTS `ability`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ability` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ability` varchar(70) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ability`
+--
+
+LOCK TABLES `ability` WRITE;
+/*!40000 ALTER TABLE `ability` DISABLE KEYS */;
+INSERT INTO `ability` VALUES (1,'High Strength - powerful, brawny'),(2,'High Dexterity - lithe, agile, graceful'),(3,'High Constitution - hardy, hale, healthy'),(4,'High Intelligence - studeious, learned, inquisitive'),(5,'High Wisdom - perceptive, spiritual, insightful'),(6,'High Charisma - persuasive, forceful, born leader'),(7,'Low Strength - feeble, scrawny'),(8,'Low Dexterity - clumsy'),(9,'Low Constitution - sickly'),(10,'Low Wisdom - oblivious, absentminded'),(11,'Low Charisma - dull, boring');
+/*!40000 ALTER TABLE `ability` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `appearance`
+--
+
+DROP TABLE IF EXISTS `appearance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `appearance` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `appearance` varchar(70) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `appearance`
+--
+
+LOCK TABLES `appearance` WRITE;
+/*!40000 ALTER TABLE `appearance` DISABLE KEYS */;
+INSERT INTO `appearance` VALUES (1,'Distinctive jewelry: earrings, necklace, circlet, bracelets'),(2,'Piercings'),(3,'Flamboyant or outlandish clothes'),(4,'Formal, clean clothes'),(5,'Ragged, dirty clothes'),(6,'Pronounced scar'),(7,'Missing teeth'),(8,'Missing fingers'),(9,'Unusual eye color (or two different colors)'),(10,'Tattoos'),(11,'Birthmark'),(12,'Unusual skin color'),(13,'Bald'),(14,'Braided beard or hair'),(15,'Unusual hair color'),(16,'Nervous eye twitch'),(17,'Distinctive nose'),(18,'Distinctive posture (crooked or rigid)'),(19,'Exceptionally beautiful'),(20,'Exceptionally ugly');
+/*!40000 ALTER TABLE `appearance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Interaction_Traits`
 --
 
@@ -23,9 +71,9 @@ DROP TABLE IF EXISTS `Interaction_Traits`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Interaction_Traits` (
-                                      `id` int NOT NULL AUTO_INCREMENT,
-                                      `trait` varchar(25) DEFAULT NULL,
-                                      PRIMARY KEY (`id`)
+  `id` int NOT NULL AUTO_INCREMENT,
+  `trait` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,14 +95,15 @@ DROP TABLE IF EXISTS `npc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `npc` (
-                       `id` int NOT NULL AUTO_INCREMENT,
-                       `interaction_traits` int DEFAULT NULL,
-                       `description` varchar(100) DEFAULT NULL,
-                       `name` varchar(50) DEFAULT NULL,
-                       PRIMARY KEY (`id`),
-                       KEY `interaction_traits_fk` (`interaction_traits`),
-                       CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `interaction_traits` int DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `ability` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `interaction_traits_fk` (`interaction_traits`),
+  CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +112,7 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob');
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1),(2,4,'merchant','mary',2),(3,6,'innkeeper','Ingrid',3),(4,2,'bookseller','Bryan',4);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -76,4 +125,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-24 20:01:16
+-- Dump completed on 2024-02-28 17:07:04
