@@ -21,6 +21,7 @@
         <mapping class="com.mnuenninghoff.entity.NPC"/>
         <mapping class="com.mnuenninghoff.entity.Ability"/>
         <mapping class="com.mnuenninghoff.entity.Appearance"/>
+        <mapping class="com.mnuenninghoff.entity.Bond"/>
 
     </session-factory>
 

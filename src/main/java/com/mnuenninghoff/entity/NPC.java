@@ -41,6 +41,14 @@ public class NPC {
 
     }
 
+    public Bond getBond() {
+        return bond;
+    }
+
+    public void setBond(Bond bond) {
+        this.bond = bond;
+    }
+
     public Appearance getAppearance() {
         return appearance;
     }
