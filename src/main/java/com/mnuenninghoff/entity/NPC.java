@@ -37,6 +37,9 @@ public class NPC {
     @ManyToOne
     @JoinColumn(name = "talent")
     private Talent talent;
+    @ManyToOne
+    @JoinColumn(name = "user")
+    private  User user;
     @Column(name = "description")
     private String description;
     @Column(name = "name")
@@ -51,6 +54,14 @@ public class NPC {
      */
     public NPC() {
 
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Talent getTalent() {
