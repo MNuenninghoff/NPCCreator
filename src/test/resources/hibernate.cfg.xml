@@ -22,6 +22,7 @@
         <mapping class="com.mnuenninghoff.entity.Ability"/>
         <mapping class="com.mnuenninghoff.entity.Appearance"/>
         <mapping class="com.mnuenninghoff.entity.Bond"/>
+        <mapping class="com.mnuenninghoff.entity.Flaw"/>
 
     </session-factory>
 
