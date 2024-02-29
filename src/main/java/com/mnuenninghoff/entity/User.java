@@ -96,7 +96,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(userName, user.userName) && Objects.equals(npcs, user.npcs);
+        return id == user.id && Objects.equals(userName, user.userName);
     }
 
     @Override
