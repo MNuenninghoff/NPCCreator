@@ -26,6 +26,7 @@
         <mapping class="com.mnuenninghoff.entity.Mannerisms"/>
         <mapping class="com.mnuenninghoff.entity.Race"/>
         <mapping class="com.mnuenninghoff.entity.Talent"/>
+        <mapping class="com.mnuenninghoff.entity.User"/>
 
     </session-factory>
 
