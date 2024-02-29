@@ -178,6 +178,7 @@ CREATE TABLE `npc` (
   `mannerisms` int DEFAULT NULL,
   `race` int DEFAULT NULL,
   `talent` int DEFAULT NULL,
+  `user` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `interaction_traits_fk` (`interaction_traits`),
   KEY `npc_appearance_id_fk` (`appearance`),
@@ -187,6 +188,7 @@ CREATE TABLE `npc` (
   KEY `npc_mannerisms_id_fk` (`mannerisms`),
   KEY `npc_race_id_fk` (`race`),
   KEY `npc_talent_id_fk` (`talent`),
+  KEY `npc_user_id_fk` (`user`),
   CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`),
   CONSTRAINT `npc_ability_id_fk` FOREIGN KEY (`ability`) REFERENCES `ability` (`id`),
   CONSTRAINT `npc_appearance_id_fk` FOREIGN KEY (`appearance`) REFERENCES `appearance` (`id`),
@@ -194,7 +196,8 @@ CREATE TABLE `npc` (
   CONSTRAINT `npc_flaw_id_fk` FOREIGN KEY (`flaw`) REFERENCES `flaw` (`id`),
   CONSTRAINT `npc_mannerisms_id_fk` FOREIGN KEY (`mannerisms`) REFERENCES `mannerisms` (`id`),
   CONSTRAINT `npc_race_id_fk` FOREIGN KEY (`race`) REFERENCES `race` (`id`),
-  CONSTRAINT `npc_talent_id_fk` FOREIGN KEY (`talent`) REFERENCES `talent` (`id`)
+  CONSTRAINT `npc_talent_id_fk` FOREIGN KEY (`talent`) REFERENCES `talent` (`id`),
+  CONSTRAINT `npc_user_id_fk` FOREIGN KEY (`user`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -204,7 +207,7 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,6 +258,31 @@ LOCK TABLES `talent` WRITE;
 INSERT INTO `talent` VALUES (1,'Plays a musical instrument'),(2,'Speaks several languages fluently'),(3,'Unbelievably lucky'),(4,'Perfect memory'),(5,'Great with animals'),(6,'Great with children'),(7,'Great at solving puzzles'),(8,'Great at one game'),(9,'Great at impersonations'),(10,'Draws beautifully'),(11,'Paints beautifully'),(12,'Sings beautifully'),(13,'Drinks everyone under the table'),(14,'Expert carpenter'),(15,'Expert cook'),(16,'Expert dart thrower and rock skipper'),(17,'Expert juggler'),(18,'Skilled actor and master of disguise'),(19,'Skilled dancer'),(20,'Knows thieves\' cant');
 /*!40000 ALTER TABLE `talent` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_name` (`user_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'MichaelN');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -265,4 +293,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 20:11:28
+-- Dump completed on 2024-02-28 20:24:50
