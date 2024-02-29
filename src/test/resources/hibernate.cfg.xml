@@ -24,6 +24,7 @@
         <mapping class="com.mnuenninghoff.entity.Bond"/>
         <mapping class="com.mnuenninghoff.entity.Flaw"/>
         <mapping class="com.mnuenninghoff.entity.Mannerisms"/>
+        <mapping class="com.mnuenninghoff.entity.Race"/>
 
     </session-factory>
 
