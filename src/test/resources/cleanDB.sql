@@ -136,6 +136,30 @@ INSERT INTO `Interaction_Traits` VALUES (1,'Argumentative'),(2,'Arrogant'),(3,'B
 UNLOCK TABLES;
 
 --
+-- Table structure for table `mannerisms`
+--
+
+DROP TABLE IF EXISTS `mannerisms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `mannerisms` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `mannerisms` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mannerisms`
+--
+
+LOCK TABLES `mannerisms` WRITE;
+/*!40000 ALTER TABLE `mannerisms` DISABLE KEYS */;
+INSERT INTO `mannerisms` VALUES (1,'Prone to singing, whistling, or humming quietly'),(2,'Speaks in rhyme or some other peculiar way'),(3,'Particularly low or high voice'),(4,'Slurs words, lisps, or stutters'),(5,'Enunciates overly clearly'),(6,'Speaks loudly'),(7,'Whispers'),(8,'Uses flowery speech or long words'),(9,'Frequently uses the wrong word'),(10,'Uses colorful oaths and exclamations'),(11,'Makes constant jokes or puns'),(12,'Prone to predictions of doom'),(13,'Fidgets'),(14,'Squints'),(15,'Stares into the distance'),(16,'Chews something'),(17,'Paces'),(18,'Taps fingers'),(19,'Bites fingernails'),(20,'Twirls hair or tugs beard');
+/*!40000 ALTER TABLE `mannerisms` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `npc`
 --
 
@@ -151,17 +175,20 @@ CREATE TABLE `npc` (
   `appearance` int DEFAULT NULL,
   `bond` int DEFAULT NULL,
   `flaw` int DEFAULT NULL,
+  `mannerisms` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `interaction_traits_fk` (`interaction_traits`),
   KEY `npc_appearance_id_fk` (`appearance`),
   KEY `npc_ability_id_fk` (`ability`),
   KEY `npc_bond_id_fk` (`bond`),
   KEY `npc_flaw_id_fk` (`flaw`),
+  KEY `npc_mannerisms_id_fk` (`mannerisms`),
   CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`),
   CONSTRAINT `npc_ability_id_fk` FOREIGN KEY (`ability`) REFERENCES `ability` (`id`),
   CONSTRAINT `npc_appearance_id_fk` FOREIGN KEY (`appearance`) REFERENCES `appearance` (`id`),
   CONSTRAINT `npc_bond_id_fk` FOREIGN KEY (`bond`) REFERENCES `bond` (`id`),
-  CONSTRAINT `npc_flaw_id_fk` FOREIGN KEY (`flaw`) REFERENCES `flaw` (`id`)
+  CONSTRAINT `npc_flaw_id_fk` FOREIGN KEY (`flaw`) REFERENCES `flaw` (`id`),
+  CONSTRAINT `npc_mannerisms_id_fk` FOREIGN KEY (`mannerisms`) REFERENCES `mannerisms` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -171,7 +198,7 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL);
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -184,4 +211,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 19:30:06
+-- Dump completed on 2024-02-28 19:43:10
