@@ -28,6 +28,9 @@ public class NPC {
     @ManyToOne
     @JoinColumn(name = "flaw")
     private Flaw flaw;
+    @ManyToOne
+    @JoinColumn(name = "mannerisms")
+    private Mannerisms mannerisms;
     @Column(name = "description")
     private String description;
     @Column(name = "name")
@@ -42,6 +45,14 @@ public class NPC {
      */
     public NPC() {
 
+    }
+
+    public Mannerisms getMannerisms() {
+        return mannerisms;
+    }
+
+    public void setMannerisms(Mannerisms mannerisms) {
+        this.mannerisms = mannerisms;
     }
 
     public Flaw getFlaw() {
