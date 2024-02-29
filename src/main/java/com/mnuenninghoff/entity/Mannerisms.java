@@ -106,7 +106,7 @@ public class Mannerisms {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Mannerisms that = (Mannerisms) o;
-        return id == that.id && Objects.equals(mannerisms, that.mannerisms) && Objects.equals(npcs, that.npcs);
+        return id == that.id && Objects.equals(mannerisms, that.mannerisms);
     }
 
     @Override
