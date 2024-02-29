@@ -273,18 +273,17 @@ public class NPC {
         this.name = name;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NPC npc = (NPC) o;
-        return id == npc.id && Objects.equals(interactionTraits, npc.interactionTraits) && Objects.equals(ability, npc.ability) && Objects.equals(appearance, npc.appearance) && Objects.equals(description, npc.description) && Objects.equals(name, npc.name);
+        return id == npc.id && Objects.equals(interactionTraits, npc.interactionTraits) && Objects.equals(ability, npc.ability) && Objects.equals(appearance, npc.appearance) && Objects.equals(bond, npc.bond) && Objects.equals(flaw, npc.flaw) && Objects.equals(mannerisms, npc.mannerisms) && Objects.equals(race, npc.race) && Objects.equals(talent, npc.talent) && Objects.equals(user, npc.user) && Objects.equals(description, npc.description) && Objects.equals(name, npc.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(interactionTraits, ability, appearance, description, name, id);
+        return Objects.hash(interactionTraits, ability, appearance, bond, flaw, mannerisms, race, talent, user, description, name, id);
     }
 }
 
