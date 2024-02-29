@@ -107,7 +107,7 @@ public class Flaw {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Flaw flaw1 = (Flaw) o;
-        return id == flaw1.id && Objects.equals(flaw, flaw1.flaw) && Objects.equals(npcs, flaw1.npcs);
+        return id == flaw1.id && Objects.equals(flaw, flaw1.flaw);
     }
 
     @Override

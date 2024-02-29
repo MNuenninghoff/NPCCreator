@@ -25,6 +25,9 @@ public class NPC {
     @ManyToOne
     @JoinColumn(name = "bond")
     private Bond bond;
+    @ManyToOne
+    @JoinColumn(name = "flaw")
+    private Flaw flaw;
     @Column(name = "description")
     private String description;
     @Column(name = "name")
@@ -39,6 +42,14 @@ public class NPC {
      */
     public NPC() {
 
+    }
+
+    public Flaw getFlaw() {
+        return flaw;
+    }
+
+    public void setFlaw(Flaw flaw) {
+        this.flaw = flaw;
     }
 
     public Bond getBond() {
