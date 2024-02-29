@@ -88,6 +88,30 @@ INSERT INTO `bond` VALUES (1,'Dedicated to fulfilling a personal life goal'),(2,
 UNLOCK TABLES;
 
 --
+-- Table structure for table `flaw`
+--
+
+DROP TABLE IF EXISTS `flaw`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `flaw` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `flaw` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `flaw`
+--
+
+LOCK TABLES `flaw` WRITE;
+/*!40000 ALTER TABLE `flaw` DISABLE KEYS */;
+INSERT INTO `flaw` VALUES (1,'Forbidden love or susceptibility to romance'),(2,'Enjoys decadent pleasures'),(3,'Arrogance'),(4,'Envies another creature\'s possessions or station'),(5,'Overpowering greed'),(6,'Prone to rage'),(7,'Has a powerful enemy'),(8,'Specific phobia'),(9,'Shameful or scandalous history'),(10,'Secret crime or misdeed'),(11,'Possession of forbidden lore'),(12,'Foolhardy bravery');
+/*!40000 ALTER TABLE `flaw` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Interaction_Traits`
 --
 
@@ -126,15 +150,18 @@ CREATE TABLE `npc` (
   `ability` int DEFAULT NULL,
   `appearance` int DEFAULT NULL,
   `bond` int DEFAULT NULL,
+  `flaw` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `interaction_traits_fk` (`interaction_traits`),
   KEY `npc_appearance_id_fk` (`appearance`),
   KEY `npc_ability_id_fk` (`ability`),
   KEY `npc_bond_id_fk` (`bond`),
+  KEY `npc_flaw_id_fk` (`flaw`),
   CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`),
   CONSTRAINT `npc_ability_id_fk` FOREIGN KEY (`ability`) REFERENCES `ability` (`id`),
   CONSTRAINT `npc_appearance_id_fk` FOREIGN KEY (`appearance`) REFERENCES `appearance` (`id`),
-  CONSTRAINT `npc_bond_id_fk` FOREIGN KEY (`bond`) REFERENCES `bond` (`id`)
+  CONSTRAINT `npc_bond_id_fk` FOREIGN KEY (`bond`) REFERENCES `bond` (`id`),
+  CONSTRAINT `npc_flaw_id_fk` FOREIGN KEY (`flaw`) REFERENCES `flaw` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -144,7 +171,7 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL);
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -157,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 17:59:15
+-- Dump completed on 2024-02-28 19:30:06
