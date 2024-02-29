@@ -176,6 +176,7 @@ CREATE TABLE `npc` (
   `bond` int DEFAULT NULL,
   `flaw` int DEFAULT NULL,
   `mannerisms` int DEFAULT NULL,
+  `race` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `interaction_traits_fk` (`interaction_traits`),
   KEY `npc_appearance_id_fk` (`appearance`),
@@ -183,12 +184,14 @@ CREATE TABLE `npc` (
   KEY `npc_bond_id_fk` (`bond`),
   KEY `npc_flaw_id_fk` (`flaw`),
   KEY `npc_mannerisms_id_fk` (`mannerisms`),
+  KEY `npc_race_id_fk` (`race`),
   CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`),
   CONSTRAINT `npc_ability_id_fk` FOREIGN KEY (`ability`) REFERENCES `ability` (`id`),
   CONSTRAINT `npc_appearance_id_fk` FOREIGN KEY (`appearance`) REFERENCES `appearance` (`id`),
   CONSTRAINT `npc_bond_id_fk` FOREIGN KEY (`bond`) REFERENCES `bond` (`id`),
   CONSTRAINT `npc_flaw_id_fk` FOREIGN KEY (`flaw`) REFERENCES `flaw` (`id`),
-  CONSTRAINT `npc_mannerisms_id_fk` FOREIGN KEY (`mannerisms`) REFERENCES `mannerisms` (`id`)
+  CONSTRAINT `npc_mannerisms_id_fk` FOREIGN KEY (`mannerisms`) REFERENCES `mannerisms` (`id`),
+  CONSTRAINT `npc_race_id_fk` FOREIGN KEY (`race`) REFERENCES `race` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -198,8 +201,32 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL);
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `race`
+--
+
+DROP TABLE IF EXISTS `race`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `race` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `race` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `race`
+--
+
+LOCK TABLES `race` WRITE;
+/*!40000 ALTER TABLE `race` DISABLE KEYS */;
+INSERT INTO `race` VALUES (1,'Human'),(2,'Dragonborn'),(3,'Dwarf'),(4,'Elf'),(5,'Gnome'),(6,'Half-Elf'),(7,'Halfling'),(8,'Half-Orc'),(9,'Tiefling'),(10,'Aasimar'),(11,'Aarakocra'),(12,'Firbolg'),(13,'Goliath'),(14,'Tabaxi');
+/*!40000 ALTER TABLE `race` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -211,4 +238,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 19:43:10
+-- Dump completed on 2024-02-28 19:55:44
