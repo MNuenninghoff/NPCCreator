@@ -125,13 +125,16 @@ CREATE TABLE `npc` (
   `name` varchar(50) DEFAULT NULL,
   `ability` int DEFAULT NULL,
   `appearance` int DEFAULT NULL,
+  `bond` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `interaction_traits_fk` (`interaction_traits`),
   KEY `npc_appearance_id_fk` (`appearance`),
   KEY `npc_ability_id_fk` (`ability`),
+  KEY `npc_bond_id_fk` (`bond`),
   CONSTRAINT `interaction_traits_fk` FOREIGN KEY (`interaction_traits`) REFERENCES `Interaction_Traits` (`id`),
   CONSTRAINT `npc_ability_id_fk` FOREIGN KEY (`ability`) REFERENCES `ability` (`id`),
-  CONSTRAINT `npc_appearance_id_fk` FOREIGN KEY (`appearance`) REFERENCES `appearance` (`id`)
+  CONSTRAINT `npc_appearance_id_fk` FOREIGN KEY (`appearance`) REFERENCES `appearance` (`id`),
+  CONSTRAINT `npc_bond_id_fk` FOREIGN KEY (`bond`) REFERENCES `bond` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -141,7 +144,7 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL),(2,4,'merchant','mary',2,NULL),(3,6,'innkeeper','Ingrid',3,NULL),(4,2,'bookseller','Bryan',4,NULL);
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -154,4 +157,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 17:42:14
+-- Dump completed on 2024-02-28 17:59:15

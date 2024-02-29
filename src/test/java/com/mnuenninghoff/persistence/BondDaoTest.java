@@ -28,17 +28,30 @@ class BondDaoTest {
 
     @Test
     void getById() {
+        Bond retrievedBond = bondDao.getById(9);
+        assertEquals("Out for revenge", retrievedBond.getBond());
     }
 
     @Test
     void delete() {
+        bondDao.delete(bondDao.getById(9));
+        assertNull(bondDao.getById(9));
     }
 
     @Test
     void insert() {
+        Bond newBond = new Bond();
+        newBond.setBond("Loves their pet");
+        int id = bondDao.insert(newBond);
+        Bond retrievedBond = bondDao.getById(id);
+        assertEquals(newBond, retrievedBond);
     }
 
     @Test
     void update() {
+        Bond bondToUpdate = bondDao.getById(9);
+        bondToUpdate.setBond("Loves pet");
+        bondDao.update(bondToUpdate);
+        assertEquals(bondToUpdate, bondDao.getById(9));
     }
 }
