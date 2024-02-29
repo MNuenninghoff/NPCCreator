@@ -10,7 +10,7 @@ that in next Friday”. Now you need to quickly make some non-player characters 
 creating right now.
 
 I want to build an application that can quickly generate randomized NPC templates to provide descriptions for busy DM’s. 
-Need a barkeeper who has something a unique trait? Now you can quickly generate it (and save it for future reference). 
+Need a barkeeper who has a unique trait? Now you can quickly generate it (and save it for future reference). 
 Struggling to come up with a fun villain for the next plot arc? Quickly make a couple random villains and see if any 
 strike your fancy.
 
@@ -39,4 +39,4 @@ Mannerisms, Interaction Traits, Bond, and Flaw**
   - AWS
 - CSS
   - ??Bootstrap??
-- IDE: EntelliJ IDEA
+- IDE: IntelliJ IDEA
