@@ -31,6 +31,9 @@ public class NPC {
     @ManyToOne
     @JoinColumn(name = "mannerisms")
     private Mannerisms mannerisms;
+    @ManyToOne
+    @JoinColumn(name = "race")
+    private Race race;
     @Column(name = "description")
     private String description;
     @Column(name = "name")
@@ -45,6 +48,14 @@ public class NPC {
      */
     public NPC() {
 
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
+    public void setRace(Race race) {
+        this.race = race;
     }
 
     public Mannerisms getMannerisms() {

@@ -106,7 +106,7 @@ public class Race {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Race race1 = (Race) o;
-        return id == race1.id && Objects.equals(race, race1.race) && Objects.equals(npcs, race1.npcs);
+        return id == race1.id && Objects.equals(race, race1.race);
     }
 
     @Override
