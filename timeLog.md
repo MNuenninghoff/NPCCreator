@@ -86,14 +86,19 @@ I made a new branch and started rebuilding piece by piece, this time testing aft
 is working as expected. All in all, a good learning experience, if a bit frustrating in the moment. Next week, I definitely
 need to get all of the Entity classes and Hibernate set up so I can start working on the controllers and jsps.
 # Week 7
-- M:
+- M: 0
+- T: 0
+- W: 2.5
 - T:
-- W:
-- T:
-- F:
-- S:
+- F: 0.5
+- S: 3.5
 - S:
 - Total:
+
+This week I got all of the database tables implemented and the Entity Classes annotated with Hibernate.
+I also wrote tests for all of the Daos (the Generic Dao, set up for each Entity class). This filled out
+the requirements for the second project checkpoint.
+
 # Week 8
 - M:
 - T:
