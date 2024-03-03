@@ -4,7 +4,7 @@
 <c:set var="title" scope="session" value="NPC Generator - Home"/>
 <c:import url="head.jsp"/>
 <body>
-<h2>Hello World!</h2>
+<h2>Welcome to the NPC Generator!</h2>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
