@@ -13,6 +13,11 @@
 <c:import url="head.jsp"/>
 <body>
 <c:import url="navbar.jsp"/>
+<div class="container-md">
+    <form method="POST" action="generateNPC">
+        <button type="submit" class="btn btn-primary" name="submit" value="generateNPC">Generate NPC</button>
+    </form>
+</div>
 
 </body>
 </html>
