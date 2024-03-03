@@ -91,7 +91,7 @@ need to get all of the Entity classes and Hibernate set up so I can start workin
 - W: 2.5
 - T:
 - F: 0.5
-- S: 3.5
+- S: 4.5
 - S:
 - Total:
 

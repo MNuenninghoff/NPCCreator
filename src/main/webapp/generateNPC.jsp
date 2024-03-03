@@ -12,6 +12,7 @@
 <c:set var = "title" scope = "session" value = "Generate NPC"/>
 <c:import url="head.jsp"/>
 <body>
+<c:import url="navbar.jsp"/>
 
 </body>
 </html>
