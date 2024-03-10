@@ -26,6 +26,14 @@ class IronArachneDaoTest {
     }
 
     @Test
+    void getMaleFirstNameInvalidRace() {
+        Name maleName = dao.getMaleFirstName("aasimar");
+        logger.debug(maleName);
+        assertEquals(1, maleName.getCount());
+        assertEquals(1, maleName.getNames().size());
+    }
+
+    @Test
     void getFemaleFirstName() {
         Name femaleName = dao.getFemaleFirstName("dwarf");
         logger.debug(femaleName);
