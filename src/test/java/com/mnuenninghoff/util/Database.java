@@ -1,6 +1,8 @@
 package com.mnuenninghoff.util;
 
 import com.mnuenninghoff.utilities.PropertiesLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -25,6 +27,7 @@ public class Database implements PropertiesLoader {
 
     private Properties properties;
     private Connection connection;
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     /** private constructor prevents instantiating this class anywhere else
      **/
@@ -70,7 +73,7 @@ public class Database implements PropertiesLoader {
             try {
                 connection.close();
             } catch (SQLException e) {
-                System.out.println("Cannot close connection" + e);
+                logger.error("Cannot close connection", e);
             }
         }
 
@@ -106,9 +109,9 @@ public class Database implements PropertiesLoader {
             }
 
         } catch (SQLException se) {
-            System.out.println("SQL Exception" + se);
+            logger.error("SQL Exception", se);
         } catch (Exception e) {
-            System.out.println("Exception" + e);
+            logger.error("Exception", e);
         } finally {
             disconnect();
         }
