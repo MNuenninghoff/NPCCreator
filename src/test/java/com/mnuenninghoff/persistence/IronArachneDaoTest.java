@@ -27,9 +27,17 @@ class IronArachneDaoTest {
 
     @Test
     void getFemaleFirstName() {
+        Name femaleName = dao.getFemaleFirstName("dwarf");
+        logger.debug(femaleName);
+        assertEquals(1, femaleName.getCount());
+        assertEquals(1, femaleName.getNames().size());
     }
 
     @Test
     void getFamilyName() {
+        Name familyName = dao.getFemaleFirstName("dwarf");
+        logger.debug(familyName);
+        assertEquals(1, familyName.getCount());
+        assertEquals(1, familyName.getNames().size());
     }
 }

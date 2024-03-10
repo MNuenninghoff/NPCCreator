@@ -32,13 +32,13 @@ public class IronArachneDao implements PropertiesLoader {
         return name;
     }
     public Name getFemaleFirstName(String race) {
-        String apiTargetString = properties.getProperty("IronArachneURI") + "/" + race + "?count=1?nameType=female";
+        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=female";
         logger.debug("API request URI: " + apiTargetString);
         Name name = queryAPI(apiTargetString);
         return name;
     }
     public Name getFamilyName(String race) {
-        String apiTargetString = properties.getProperty("IronArachneURI") + "/" + race + "?count=1?nameType=family";
+        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=family";
         logger.debug("API request URI: " + apiTargetString);
         Name name = queryAPI(apiTargetString);
         return name;
