@@ -15,7 +15,7 @@ import java.util.Properties;
  */
 public interface PropertiesLoader {
 
-    private final Logger logger = LogManager.getLogger(this.getClass());
+
     /**
      * This default method will load a properties file into a Properties instance
      * and return it.
@@ -23,7 +23,7 @@ public interface PropertiesLoader {
      * @return a populated Properties instance or an empty Properties instance if
      * the file path was not found.
      */
-    default Properties loadProperties(String propertiesFilePath){
+    default Properties loadProperties(String propertiesFilePath, Logger logger){
         Properties properties = new Properties();
         try {
             properties.load(this.getClass().getResourceAsStream(propertiesFilePath));

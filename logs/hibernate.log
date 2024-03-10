@@ -1,0 +1,485 @@
+[DEBUG] 2024-03-10 16:53:01.478 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.boot.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2024-03-10 16:53:01.481 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[TRACE] 2024-03-10 16:53:01.486 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:01.486 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:01.486 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:01.486 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:01.486 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:01.487 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteInsertStrategy]
+[TRACE] 2024-03-10 16:53:01.487 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableInsertStrategy]
+[TRACE] 2024-03-10 16:53:01.487 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableInsertStrategy]
+[TRACE] 2024-03-10 16:53:01.487 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableInsertStrategy]
+[TRACE] 2024-03-10 16:53:01.488 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteMutationStrategy]
+[TRACE] 2024-03-10 16:53:01.488 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableMutationStrategy]
+[TRACE] 2024-03-10 16:53:01.488 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableMutationStrategy]
+[TRACE] 2024-03-10 16:53:01.488 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableMutationStrategy]
+[TRACE] 2024-03-10 16:53:01.488 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+[TRACE] 2024-03-10 16:53:01.489 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+[TRACE] 2024-03-10 16:53:01.489 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+[TRACE] 2024-03-10 16:53:01.489 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+[TRACE] 2024-03-10 16:53:01.489 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+[TRACE] 2024-03-10 16:53:01.490 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [standard] -> [org.hibernate.id.enhanced.StandardNamingStrategy]
+[TRACE] 2024-03-10 16:53:01.490 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [single] -> [org.hibernate.id.enhanced.SingleNamingStrategy]
+[TRACE] 2024-03-10 16:53:01.490 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [legacy] -> [org.hibernate.id.enhanced.LegacyNamingStrategy]
+[TRACE] 2024-03-10 16:53:01.490 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.relational.ColumnOrderingStrategy] : [default] -> [org.hibernate.boot.model.relational.ColumnOrderingStrategyStandard]
+[TRACE] 2024-03-10 16:53:01.490 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.relational.ColumnOrderingStrategy] : [legacy] -> [org.hibernate.boot.model.relational.ColumnOrderingStrategyLegacy]
+[TRACE] 2024-03-10 16:53:01.491 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+[TRACE] 2024-03-10 16:53:01.491 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+[TRACE] 2024-03-10 16:53:01.491 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jackson] -> [org.hibernate.type.format.jackson.JacksonJsonFormatMapper]
+[TRACE] 2024-03-10 16:53:01.491 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jsonb] -> [org.hibernate.type.format.jakartajson.JsonBJsonFormatMapper]
+[TRACE] 2024-03-10 16:53:01.491 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jackson-xml] -> [org.hibernate.type.format.jackson.JacksonXmlFormatMapper]
+[TRACE] 2024-03-10 16:53:01.492 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jaxb] -> [org.hibernate.type.format.jaxb.JaxbXmlFormatMapper]
+[TRACE] 2024-03-10 16:53:01.493 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [c3p0] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:01.494 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [C3P0ConnectionProvider] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:01.494 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [org.hibernate.connection.C3P0ConnectionProvider] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:01.494 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[INFO ] 2024-03-10 16:53:01.497 [main] Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+[DEBUG] 2024-03-10 16:53:01.498 [main] Environment - HHH000206: 'hibernate.properties' not found
+[TRACE] 2024-03-10 16:53:01.507 [main] ClassLoaderServiceImpl - trying via [new URL("hibernate.cfg.xml")]
+[TRACE] 2024-03-10 16:53:01.507 [main] ClassLoaderServiceImpl - trying via [ClassLoader.getResourceAsStream("hibernate.cfg.xml")]
+[TRACE] 2024-03-10 16:53:01.519 [main] LocalXmlResourceResolver - In resolveEntity(-//Hibernate/Hibernate Configuration DTD//EN, http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd, null, null)
+[DEBUG] 2024-03-10 16:53:01.520 [main] LocalXmlResourceResolver - Checking public/system identifiers `-//Hibernate/Hibernate Configuration DTD//EN`/`http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd` as DTD references
+[DEBUG] 2024-03-10 16:53:01.522 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[TRACE] 2024-03-10 16:53:01.602 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.id.factory.IdentifierGeneratorFactory]
+[TRACE] 2024-03-10 16:53:01.603 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.config.spi.ConfigurationService]
+[DEBUG] 2024-03-10 16:53:01.605 [main] factory - Ignoring CDI for resolving IdentifierGenerator instances as extended or delayed CDI support was enabled
+[DEBUG] 2024-03-10 16:53:01.607 [main] factory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2024-03-10 16:53:01.607 [main] factory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2024-03-10 16:53:01.607 [main] factory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2024-03-10 16:53:01.607 [main] factory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2024-03-10 16:53:01.607 [main] factory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2024-03-10 16:53:01.608 [main] factory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2024-03-10 16:53:01.608 [main] factory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2024-03-10 16:53:01.608 [main] factory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2024-03-10 16:53:01.608 [main] factory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2024-03-10 16:53:01.609 [main] factory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2024-03-10 16:53:01.609 [main] factory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2024-03-10 16:53:01.609 [main] factory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[TRACE] 2024-03-10 16:53:01.612 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+[TRACE] 2024-03-10 16:53:01.612 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.cache.spi.RegionFactory]
+[DEBUG] 2024-03-10 16:53:01.612 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[INFO ] 2024-03-10 16:53:01.612 [main] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@718dbd79
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@718dbd79
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@718dbd79
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@20134094
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@20134094
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.BasicTypeReference@76889e60
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@76889e60
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@706fe5c6
+[DEBUG] 2024-03-10 16:53:01.653 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@706fe5c6
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6c15e8c7
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6c15e8c7
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@6c15e8c7
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BasicTypeReference@56380231
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@56380231
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BasicTypeReference@56380231
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@64f1fd08
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@64f1fd08
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.BasicTypeReference@6b3f6585
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BasicTypeReference@282ffbf5
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@282ffbf5
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@3e104d4b
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@55e2fe3c
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.BasicTypeReference@45e1aa48
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.BasicTypeReference@45e1aa48
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@45e1aa48
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.BasicTypeReference@12c60152
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.BasicTypeReference@12c60152
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@12c60152
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.BasicTypeReference@2e807c54
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.BasicTypeReference@2e807c54
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@2e807c54
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.BasicTypeReference@6cd164a6
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.BasicTypeReference@6cd164a6
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@6cd164a6
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.BasicTypeReference@242a209e
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.BasicTypeReference@242a209e
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@242a209e
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@64469d8
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@64469d8
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@2b8bd798
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@2b8bd798
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.BasicTypeReference@4c18621b
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.BasicTypeReference@4c18621b
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@4c18621b
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@39c385d6
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.BasicTypeReference@1cec219f
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@1cec219f
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.BasicTypeReference@692e028d
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.BasicTypeReference@6629ad09
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.BasicTypeReference@6629ad09
+[DEBUG] 2024-03-10 16:53:01.654 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.BasicTypeReference@6629ad09
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@43e1692f
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.BasicTypeReference@3e7c4815
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.BasicTypeReference@27df0f3d
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.BasicTypeReference@c35af2a
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@c35af2a
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.BasicTypeReference@44550792
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@44550792
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@1835d3ed
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@474c9131
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@66213a0d
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@aa4d8cc
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@3cb8c8ce
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@1fde0371
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.BasicTypeReference@70c0a3d5
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@70c0a3d5
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5c8e67b9
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5c8e67b9
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@260a3a5e
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@260a3a5e
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@49206065
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@49206065
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@3c0bbc9f
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@3c0bbc9f
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1317b708
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6438a7fe
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@2e51d054
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@2e51d054
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@4f5f6e45
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@615e3f51
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@407873d3
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@608bc8f8
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@608bc8f8
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@5412bfea
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@44a6a68e
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.BasicTypeReference@4743a322
+[DEBUG] 2024-03-10 16:53:01.655 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@4743a322
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.BasicTypeReference@79316f3a
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@79316f3a
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@381d7219
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@381d7219
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@381d7219
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.BasicTypeReference@49fe3142
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@49fe3142
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@49fe3142
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@13fed1ec
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@61c42416
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration instant -> org.hibernate.type.BasicTypeReference@329a1f8d
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@329a1f8d
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration uuid -> org.hibernate.type.BasicTypeReference@a565cbd
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@a565cbd
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@a565cbd
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@6fc29daa
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@2f66f0d0
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.BasicTypeReference@4d62f4c6
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@4d62f4c6
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.BasicTypeReference@7569ea63
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration Currency -> org.hibernate.type.BasicTypeReference@7569ea63
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@7569ea63
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.BasicTypeReference@ebd06a9
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@ebd06a9
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.BasicTypeReference@16c587de
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@16c587de
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.BasicTypeReference@4cdb8504
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@4cdb8504
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@76db540e
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@76db540e
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.BasicTypeReference@10358c32
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@10358c32
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration vector -> org.hibernate.type.BasicTypeReference@2af4129d
+[DEBUG] 2024-03-10 16:53:01.656 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.BasicTypeReference@3a175162
+[DEBUG] 2024-03-10 16:53:01.658 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.JavaObjectType@3727f0ee
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@3727f0ee
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration null -> org.hibernate.type.NullType@6c6333cd
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@3e47a03
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@7d9ba6c
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@8deb645
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@7dd611c8
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@5d425813
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@1702830d
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@6a937336
+[DEBUG] 2024-03-10 16:53:01.659 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@278667fd
+[TRACE] 2024-03-10 16:53:01.660 [main] SqmFunctionRegistry - SqmFunctionRegistry created
+[TRACE] 2024-03-10 16:53:01.660 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+[TRACE] 2024-03-10 16:53:01.671 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[TRACE] 2024-03-10 16:53:01.671 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+[TRACE] 2024-03-10 16:53:01.672 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+[TRACE] 2024-03-10 16:53:01.673 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+[TRACE] 2024-03-10 16:53:01.673 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+[TRACE] 2024-03-10 16:53:01.673 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+[INFO ] 2024-03-10 16:53:01.675 [main] c3p0 - HHH010002: C3P0 using driver: com.mysql.cj.jdbc.Driver at URL: jdbc:mysql://localhost:3306/npc_test
+[INFO ] 2024-03-10 16:53:01.675 [main] c3p0 - HHH10001001: Connection properties: {password=****, user=student}
+[INFO ] 2024-03-10 16:53:01.675 [main] c3p0 - HHH10001003: Autocommit mode: false
+[INFO ] 2024-03-10 16:53:01.722 [main] c3p0 - HHH10001007: JDBC isolation level: <unknown>
+[TRACE] 2024-03-10 16:53:01.724 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder]
+[WARN ] 2024-03-10 16:53:32.357 [main] JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) [hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at com.mnuenninghoff.persistence.SessionFactoryProvider.createSessionFactory(SessionFactoryProvider.java:32) [classes/:?]
+	at com.mnuenninghoff.persistence.SessionFactoryProvider.getSessionFactory(SessionFactoryProvider.java:45) [classes/:?]
+	at com.mnuenninghoff.persistence.GenericDao.getSession(GenericDao.java:159) [classes/:?]
+	at com.mnuenninghoff.persistence.GenericDao.getById(GenericDao.java:61) [classes/:?]
+	at com.mnuenninghoff.persistence.AppearanceDaoTest.delete(AppearanceDaoTest.java:36) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:389) [junit-platform-commons-1.0.0.jar:1.0.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:167) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.execution.ThrowableCollector.execute(ThrowableCollector.java:40) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:163) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:110) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:57) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:83) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:51) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) [idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) [junit-rt.jar:?]
+[DEBUG] 2024-03-10 16:53:32.373 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.boot.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2024-03-10 16:53:32.373 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteInsertStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableInsertStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableInsertStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableInsertStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableInsertStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteMutationStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableMutationStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableMutationStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableMutationStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [standard] -> [org.hibernate.id.enhanced.StandardNamingStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [single] -> [org.hibernate.id.enhanced.SingleNamingStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [legacy] -> [org.hibernate.id.enhanced.LegacyNamingStrategy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.relational.ColumnOrderingStrategy] : [default] -> [org.hibernate.boot.model.relational.ColumnOrderingStrategyStandard]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.boot.model.relational.ColumnOrderingStrategy] : [legacy] -> [org.hibernate.boot.model.relational.ColumnOrderingStrategyLegacy]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jackson] -> [org.hibernate.type.format.jackson.JacksonJsonFormatMapper]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jsonb] -> [org.hibernate.type.format.jakartajson.JsonBJsonFormatMapper]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jackson-xml] -> [org.hibernate.type.format.jackson.JacksonXmlFormatMapper]
+[TRACE] 2024-03-10 16:53:32.374 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.type.format.FormatMapper] : [jaxb] -> [org.hibernate.type.format.jaxb.JaxbXmlFormatMapper]
+[TRACE] 2024-03-10 16:53:32.375 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [c3p0] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.375 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [C3P0ConnectionProvider] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.375 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [org.hibernate.connection.C3P0ConnectionProvider] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.375 [main] StrategySelectorImpl - Registering named strategy selector [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider] : [org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider] -> [org.hibernate.c3p0.internal.C3P0ConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.375 [main] ClassLoaderServiceImpl - trying via [new URL("hibernate.cfg.xml")]
+[TRACE] 2024-03-10 16:53:32.375 [main] ClassLoaderServiceImpl - trying via [ClassLoader.getResourceAsStream("hibernate.cfg.xml")]
+[TRACE] 2024-03-10 16:53:32.376 [main] LocalXmlResourceResolver - In resolveEntity(-//Hibernate/Hibernate Configuration DTD//EN, http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd, null, null)
+[DEBUG] 2024-03-10 16:53:32.376 [main] LocalXmlResourceResolver - Checking public/system identifiers `-//Hibernate/Hibernate Configuration DTD//EN`/`http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd` as DTD references
+[DEBUG] 2024-03-10 16:53:32.377 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[TRACE] 2024-03-10 16:53:32.386 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.id.factory.IdentifierGeneratorFactory]
+[TRACE] 2024-03-10 16:53:32.386 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.config.spi.ConfigurationService]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Ignoring CDI for resolving IdentifierGenerator instances as extended or delayed CDI support was enabled
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2024-03-10 16:53:32.386 [main] factory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[TRACE] 2024-03-10 16:53:32.386 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.386 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.cache.spi.RegionFactory]
+[DEBUG] 2024-03-10 16:53:32.386 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[INFO ] 2024-03-10 16:53:32.386 [main] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[DEBUG] 2024-03-10 16:53:32.386 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@718dbd79
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@718dbd79
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@718dbd79
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@20134094
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@20134094
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.BasicTypeReference@76889e60
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@76889e60
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@706fe5c6
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@706fe5c6
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6c15e8c7
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6c15e8c7
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@6c15e8c7
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BasicTypeReference@56380231
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@56380231
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BasicTypeReference@56380231
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@64f1fd08
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@64f1fd08
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.BasicTypeReference@6b3f6585
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BasicTypeReference@282ffbf5
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@282ffbf5
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@3e104d4b
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@55e2fe3c
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.BasicTypeReference@45e1aa48
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.BasicTypeReference@45e1aa48
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@45e1aa48
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.BasicTypeReference@12c60152
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.BasicTypeReference@12c60152
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@12c60152
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.BasicTypeReference@2e807c54
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.BasicTypeReference@2e807c54
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@2e807c54
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.BasicTypeReference@6cd164a6
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.BasicTypeReference@6cd164a6
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@6cd164a6
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.BasicTypeReference@242a209e
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.BasicTypeReference@242a209e
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@242a209e
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@64469d8
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@64469d8
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@2b8bd798
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@2b8bd798
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.BasicTypeReference@4c18621b
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.BasicTypeReference@4c18621b
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@4c18621b
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@39c385d6
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.BasicTypeReference@1cec219f
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@1cec219f
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.BasicTypeReference@692e028d
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.BasicTypeReference@6629ad09
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.BasicTypeReference@6629ad09
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.BasicTypeReference@6629ad09
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@43e1692f
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.BasicTypeReference@3e7c4815
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.BasicTypeReference@27df0f3d
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.BasicTypeReference@c35af2a
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@c35af2a
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.BasicTypeReference@44550792
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@44550792
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@1835d3ed
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@474c9131
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@66213a0d
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@aa4d8cc
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@3cb8c8ce
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@1fde0371
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.BasicTypeReference@70c0a3d5
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@70c0a3d5
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5c8e67b9
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5c8e67b9
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@260a3a5e
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@260a3a5e
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@49206065
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@49206065
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@3c0bbc9f
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@3c0bbc9f
+[DEBUG] 2024-03-10 16:53:32.387 [main] BasicTypeRegistry - Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1317b708
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6438a7fe
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@2e51d054
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@2e51d054
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@4f5f6e45
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@615e3f51
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@407873d3
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@608bc8f8
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@608bc8f8
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@5412bfea
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@44a6a68e
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.BasicTypeReference@4743a322
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@4743a322
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.BasicTypeReference@79316f3a
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@79316f3a
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@381d7219
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@381d7219
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@381d7219
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.BasicTypeReference@49fe3142
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@49fe3142
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@49fe3142
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@13fed1ec
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@61c42416
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration instant -> org.hibernate.type.BasicTypeReference@329a1f8d
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@329a1f8d
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration uuid -> org.hibernate.type.BasicTypeReference@a565cbd
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@a565cbd
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@a565cbd
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@6fc29daa
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@2f66f0d0
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.BasicTypeReference@4d62f4c6
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@4d62f4c6
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.BasicTypeReference@7569ea63
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration Currency -> org.hibernate.type.BasicTypeReference@7569ea63
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@7569ea63
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.BasicTypeReference@ebd06a9
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@ebd06a9
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.BasicTypeReference@16c587de
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@16c587de
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.BasicTypeReference@4cdb8504
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@4cdb8504
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@76db540e
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@76db540e
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.BasicTypeReference@10358c32
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@10358c32
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration vector -> org.hibernate.type.BasicTypeReference@2af4129d
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.BasicTypeReference@3a175162
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.JavaObjectType@3727f0ee
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@3727f0ee
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration null -> org.hibernate.type.NullType@6c6333cd
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@78e17a99
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@625a4ff
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@41dc0598
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@196ae579
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@6a2c717f
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@41853299
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@60d40ff4
+[DEBUG] 2024-03-10 16:53:32.388 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@2e5b7fba
+[TRACE] 2024-03-10 16:53:32.388 [main] SqmFunctionRegistry - SqmFunctionRegistry created
+[TRACE] 2024-03-10 16:53:32.388 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+[TRACE] 2024-03-10 16:53:32.389 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[TRACE] 2024-03-10 16:53:32.389 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+[TRACE] 2024-03-10 16:53:32.389 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+[TRACE] 2024-03-10 16:53:32.389 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.389 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+[TRACE] 2024-03-10 16:53:32.389 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+[INFO ] 2024-03-10 16:53:32.389 [main] c3p0 - HHH010002: C3P0 using driver: com.mysql.cj.jdbc.Driver at URL: jdbc:mysql://localhost:3306/npc_test
+[INFO ] 2024-03-10 16:53:32.389 [main] c3p0 - HHH10001001: Connection properties: {password=****, user=student}
+[INFO ] 2024-03-10 16:53:32.389 [main] c3p0 - HHH10001003: Autocommit mode: false
+[INFO ] 2024-03-10 16:53:32.397 [main] c3p0 - HHH10001007: JDBC isolation level: <unknown>
+[TRACE] 2024-03-10 16:53:32.397 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder]

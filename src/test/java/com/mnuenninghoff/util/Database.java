@@ -32,7 +32,7 @@ public class Database implements PropertiesLoader {
     /** private constructor prevents instantiating this class anywhere else
      **/
     private Database() {
-        this.properties = loadProperties("/database.properties");
+        this.properties = loadProperties("/database.properties", logger);
 
     }
 

@@ -23,7 +23,7 @@ public class IronArachneDao implements PropertiesLoader {
      * No Argument constructor. Loads properties file with uri
      */
     public IronArachneDao() {
-        this.properties = loadProperties("/npcCreator.properties");
+        this.properties = loadProperties("/npcCreator.properties", logger);
     }
 
     public Name getMaleFirstName(String race) {
