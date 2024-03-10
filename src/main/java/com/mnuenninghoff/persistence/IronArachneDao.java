@@ -26,7 +26,7 @@ public class IronArachneDao implements PropertiesLoader {
     }
 
     public Name getMaleFirstName(String race) {
-        String apiTargetString = properties.getProperty("IronArachneURI") + "/" + race + "?count=1?nameType=male";
+        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=male";
         logger.debug("API request URI: " + apiTargetString);
         Name name = queryAPI(apiTargetString);
         return name;
