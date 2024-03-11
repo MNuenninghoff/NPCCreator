@@ -45,6 +45,7 @@ public class GenerateActionServlet extends HttpServlet {
         // TODO: remove after done with debugging
         session.setAttribute("test", "went through GenerateActionServlet");
         // Add npc to the session
+        logger.debug(npc);
         session.setAttribute("newNPC", npc);
         // forward to editNPC.jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("editNPC.jsp");

@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mnuenninghoff
-  Date: 3/3/24
-  Time: 8:26 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!doctype html>
 <html>
-<head>
-    <title>Title</title>
-</head>
+<c:set var = "title" scope = "session" value = "Edit NPC"/>
+<c:import url="head.jsp"/>
 <body>
+<c:import url="navbar.jsp"/>
+ <p>
+     ${newNPC}
+ </p>
 
 </body>
 </html>
