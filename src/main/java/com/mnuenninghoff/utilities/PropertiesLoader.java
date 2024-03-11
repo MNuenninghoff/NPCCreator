@@ -1,5 +1,8 @@
 package com.mnuenninghoff.utilities;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -12,6 +15,7 @@ import java.util.Properties;
  */
 public interface PropertiesLoader {
 
+
     /**
      * This default method will load a properties file into a Properties instance
      * and return it.
@@ -19,14 +23,14 @@ public interface PropertiesLoader {
      * @return a populated Properties instance or an empty Properties instance if
      * the file path was not found.
      */
-    default Properties loadProperties(String propertiesFilePath){
+    default Properties loadProperties(String propertiesFilePath, Logger logger){
         Properties properties = new Properties();
         try {
             properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
         } catch (IOException ioException) {
-            ioException.printStackTrace();
+            logger.error(ioException);
         } catch (Exception exception) {
-            exception.printStackTrace();
+            logger.error(exception);
         }
         return properties;
     }
