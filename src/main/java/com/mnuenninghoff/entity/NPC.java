@@ -274,6 +274,24 @@ public class NPC {
     }
 
     @Override
+    public String toString() {
+        return "NPC{" +
+                "interactionTraits=" + interactionTraits +
+                ", ability=" + ability +
+                ", appearance=" + appearance +
+                ", bond=" + bond +
+                ", flaw=" + flaw +
+                ", mannerisms=" + mannerisms +
+                ", race=" + race +
+                ", talent=" + talent +
+                ", user=" + user +
+                ", description='" + description + '\'' +
+                ", name='" + name + '\'' +
+                ", id=" + id +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
