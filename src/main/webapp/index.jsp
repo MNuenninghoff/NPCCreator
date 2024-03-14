@@ -6,6 +6,14 @@
 <body>
 <c:import url="navbar.jsp"/>
 <h2>Welcome to the NPC Generator!</h2>
+<c:choose>
+    <c:when test="${empty userName}">
+        <a href = "logIn">Log in</a>
+    </c:when>
+    <c:otherwise>
+        <h3>Welcome ${userName}</h3>
+    </c:otherwise>
+</c:choose>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
