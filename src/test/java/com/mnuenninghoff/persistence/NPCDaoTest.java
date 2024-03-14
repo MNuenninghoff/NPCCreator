@@ -1,5 +1,6 @@
 package com.mnuenninghoff.persistence;
 
+import com.mnuenninghoff.entity.Ability;
 import com.mnuenninghoff.entity.InteractionTraits;
 import com.mnuenninghoff.entity.NPC;
 import com.mnuenninghoff.util.Database;
@@ -44,6 +45,19 @@ class NPCDaoTest {
         List<NPC> npcs = npcDao.getAll();
         assertEquals(3, npcs.size());
     }
+
+    @Test
+    void deleteNPCbutTraitnotDeleted() {
+        npcDao.delete(npcDao.getById(1));
+        assertNull(npcDao.getById(1));
+        List<NPC> npcs = npcDao.getAll();
+        assertEquals(3, npcs.size());
+
+        GenericDao<Ability> abilityDao = new GenericDao<>(Ability.class);
+        assertNotNull(abilityDao.getById(1));
+    }
+
+
 
     @Test
     void insert() {
