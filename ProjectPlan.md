@@ -24,19 +24,19 @@ Focus: JSPs
 # Week 6 - Deployment to AWS - Checkpoint 2 due next Wed
 Focus: Daos and start JSPs
 - [x] Create Generic Dao
-- [ ] Unit tests for each Entity Class/Dao
+- [x] Unit tests for each Entity Class/Dao
 - [ ] Create JSPs for each of the screens outlined in screen design
 - [x] test version of database for unit testing
 - [x] Create class for DB connection
-- [ ] Create controller to route to NPC generation
+- [x] Create controller to route to NPC generation
 - [ ] Create controller to route to NPC editing
-- [ ] Ensure that Log4J is implemented
+- [x] Ensure that Log4J is implemented
 
 # Week 7 - Security/Authentication - Checkpoint 2 due Wed
 - Checkpoint 2: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) 
   implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns).
 - [ ] Double check that all checkpoint 2 items are complete and visible in github
-- [ ] Set up Authentication in project
+- [x] Set up Authentication in project
 - [ ] Create project DB on AWS
 - [ ] Update project config files for AWS as needed
 - [ ] Deploy project to AWS
@@ -44,7 +44,7 @@ Focus: Daos and start JSPs
 - [ ] update weekly time log
 
 # Week 8 - Web Services Intro
-- [ ] research possible APIs
+- [x] research possible APIs
 
 # Spring Break - Checkpoint 3 due next Wed
 

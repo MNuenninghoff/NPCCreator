@@ -7,6 +7,8 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mnuenninghoff.auth.*;
+import com.mnuenninghoff.entity.User;
+import com.mnuenninghoff.persistence.GenericDao;
 import com.mnuenninghoff.utilities.PropertiesLoader;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +20,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -36,6 +39,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
@@ -79,6 +83,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authCode = req.getParameter("code");
         String userName = null;
+        HttpSession session = req.getSession();
 
         if (authCode == null) {
             //TODO forward to an error page or back to the login
@@ -88,6 +93,24 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 TokenResponse tokenResponse = getToken(authRequest);
                 userName = validate(tokenResponse);
                 req.setAttribute("userName", userName);
+                GenericDao<User> userDao = new GenericDao<User>(User.class);
+
+                // check if the userName is in the database
+                List<User> users = userDao.findByPropertyEqual("userName", userName);
+                if (users.size() == 1) {
+                    // put retrieved User into session
+                    session.setAttribute("user", users.get(0));
+                    logger.debug("User placed in session: " + users.get(0));
+                } else if (users.isEmpty()){
+                    // create new User with the username, store in database, place into session
+                    User newUser = new User(userName);
+                    int newUserId = userDao.insert(newUser);
+                    session.setAttribute("user", userDao.getById(newUserId));
+                    logger.debug("User placed in session: " + userDao.getById(newUserId));
+                } else {
+                    //TODO: forward to error page or back to login
+                    logger.debug("More than one user found with user naeme \"" + userName +"\"");
+                }
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
                 //TODO forward to an error page
