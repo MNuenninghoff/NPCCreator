@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mnuenninghoff
-  Date: 3/14/24
-  Time: 1:40 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!doctype html>
+<html lang="en">
+<c:set var="title" scope="page" value="NPC Generator - Error"/>
+<c:import url="head.jsp"/>
 <body>
-
+    <c:import url="navbar.jsp"/>
+    <h2>Something went wrong!</h2>
+    <h3>${errorMessage}</h3>
 </body>
 </html>
