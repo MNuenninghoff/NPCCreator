@@ -86,7 +86,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         HttpSession session = req.getSession();
 
         if (authCode == null) {
-            //TODO forward to an error page or back to the login
+            forwardLoginError(req, resp, session);
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
@@ -108,20 +108,33 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                     session.setAttribute("user", userDao.getById(newUserId));
                     logger.debug("User placed in session: " + userDao.getById(newUserId));
                 } else {
-                    //TODO: forward to error page or back to login
                     logger.debug("More than one user found with user naeme \"" + userName +"\"");
+                    forwardLoginError(req, resp, session);
                 }
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                //TODO forward to an error page
+                forwardLoginError(req, resp, session);
             } catch (InterruptedException e) {
                 logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
-                //TODO forward to an error page
+                forwardLoginError(req, resp, session);
             }
         }
         RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
         dispatcher.forward(req, resp);
 
+    }
+
+    /**
+     * Places error message in the session and forwards to error.jsp
+     * @param req       servlet request
+     * @param resp      servlet response
+     * @param session   servlet session
+     */
+    private void forwardLoginError(HttpServletRequest req, HttpServletResponse resp, HttpSession session)
+            throws ServletException, IOException {
+        session.setAttribute("errorMessage", "There was a problem logging you in! Please try again");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("error.jsp");
+        dispatcher.forward(req, resp);
     }
 
     /**
