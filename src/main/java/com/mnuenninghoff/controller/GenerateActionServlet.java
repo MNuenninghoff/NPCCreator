@@ -2,6 +2,7 @@ package com.mnuenninghoff.controller;
 
 import com.mnuenninghoff.entity.*;
 import com.mnuenninghoff.persistence.GenericDao;
+import com.mnuenninghoff.persistence.IronArachneDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,20 +40,30 @@ public class GenerateActionServlet extends HttpServlet {
         String submit = request.getParameter("submit");
         logger.debug("submit value: " + submit);
         if (submit.equals("generateNPC")) {
-            npc = generateNewNPC();
+            npc = generateNewNPC(session);
+            // TODO: remove after done with debugging
+            // Add npc to the session
+            logger.debug(npc);
+            session.setAttribute("npc", npc);
+            // forward to editNPC.jsp
+            RequestDispatcher dispatcher = request.getRequestDispatcher("editNPC.jsp");
+            dispatcher.forward(request, response);
+        } else if (submit.equals("saveNPC")) {
+            saveNPC(session);
+            //TODO: redirect to viewNPC
+        } else if (submit.equals("deleteNPC")) {
+            deleteNPC(session);
+            //TODO: redirect to home
         }
 
-        // TODO: remove after done with debugging
-        session.setAttribute("test", "went through GenerateActionServlet");
-        // Add npc to the session
-        logger.debug(npc);
-        session.setAttribute("newNPC", npc);
-        // forward to editNPC.jsp
-        RequestDispatcher dispatcher = request.getRequestDispatcher("editNPC.jsp");
-        dispatcher.forward(request, response);
     }
 
-    private NPC generateNewNPC() {
+    /**
+     * Generates a new random NPC
+     * @param session   HttpSession
+     * @return  randomly generated NPC
+     */
+    private NPC generateNewNPC(HttpSession session) {
         NPC npc = new NPC();
         Random random = new Random();
         // add random value for...
@@ -77,15 +88,60 @@ public class GenerateActionServlet extends HttpServlet {
         InteractionTraits randomInteractionTraits = interactionTraits.get(random.nextInt(interactionTraits.size()));
         npc.setInteractionTraits(randomInteractionTraits);
         // Mannerisms
-
+        GenericDao<Mannerisms> mannerismsDao = new GenericDao<>(Mannerisms.class);
+        List<Mannerisms> mannerisms = mannerismsDao.getAll();
+        Mannerisms randomMannerism = mannerisms.get(random.nextInt(mannerisms.size()));
+        npc.setMannerisms(randomMannerism);
         // Race
-
+        GenericDao<Race> raceDao = new GenericDao<>(Race.class);
+        List<Race> races = raceDao.getAll();
+        Race randomRace = races.get(random.nextInt(races.size()));
         // Name
-
+        IronArachneDao nameGenerator = new IronArachneDao();
+        Name firstName = null;
+        // randomly pick male/female first name
+        if (random.nextInt(2) == 0) {
+            firstName = nameGenerator.getMaleFirstName(randomRace.getRace());
+        } else {
+            firstName = nameGenerator.getFemaleFirstName(randomRace.getRace());
+        }
+        Name lastName = nameGenerator.getFamilyName(randomRace.getRace());
+        String fullName = firstName.getNames().get(0) + " " + lastName.getNames().get(0);
+        npc.setName(fullName);
         // Talent
-
-        // User TODO: set user value equal to the userid in session
+        GenericDao<Talent> talentDao = new GenericDao<>(Talent.class);
+        List<Talent> talents = talentDao.getAll();
+        Talent randomTalent = talents.get(random.nextInt(talents.size()));
+        // User
+        if (session.getAttribute("user") != null) {
+            npc.setUser((User)session.getAttribute("user"));
+        }
 
         return npc;
+    }
+
+    /**
+     * saves NPC in the session to the database
+     * @param session   HttpSession
+     */
+    private void saveNPC(HttpSession session) {
+        NPC npcToSave = (NPC)session.getAttribute("npc");
+        GenericDao<NPC> npcDao = new GenericDao<>(NPC.class);
+        // check if NPC is in database. If yes, update. If no, insert
+        if (npcToSave.getId() != 0) {
+            npcDao.update(npcToSave);
+        } else {
+            npcDao.insert(npcToSave);
+        }
+    }
+
+    /**
+     * Deletes npc in session from the database
+     * @param session   HttpSession
+     */
+    private void deleteNPC(HttpSession session) {
+        NPC npcToDelete = (NPC)session.getAttribute("npc");
+        GenericDao<NPC> npcDao = new GenericDao<>(NPC.class);
+        npcDao.delete(npcToDelete);
     }
 }
