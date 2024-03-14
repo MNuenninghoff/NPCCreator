@@ -23,9 +23,9 @@ DROP TABLE IF EXISTS `ability`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ability` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `ability` varchar(70) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                           `id` int NOT NULL AUTO_INCREMENT,
+                           `ability` varchar(70) DEFAULT NULL,
+                           PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,9 +47,9 @@ DROP TABLE IF EXISTS `appearance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `appearance` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `appearance` varchar(70) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                              `id` int NOT NULL AUTO_INCREMENT,
+                              `appearance` varchar(70) DEFAULT NULL,
+                              PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -71,9 +71,9 @@ DROP TABLE IF EXISTS `bond`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `bond` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `bond` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                        `id` int NOT NULL AUTO_INCREMENT,
+                        `bond` varchar(50) DEFAULT NULL,
+                        PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -95,9 +95,9 @@ DROP TABLE IF EXISTS `flaw`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `flaw` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `flaw` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                        `id` int NOT NULL AUTO_INCREMENT,
+                        `flaw` varchar(50) DEFAULT NULL,
+                        PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -207,7 +207,7 @@ CREATE TABLE `npc` (
 
 LOCK TABLES `npc` WRITE;
 /*!40000 ALTER TABLE `npc` DISABLE KEYS */;
-INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `npc` VALUES (1,2,'barkeep','bob',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,4,'merchant','mary',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,6,'innkeeper','Ingrid',3,NULL,NULL,NULL,NULL,NULL,NULL,1),(4,2,'bookseller','Bryan',4,NULL,NULL,NULL,NULL,NULL,NULL,1);
 /*!40000 ALTER TABLE `npc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,10 +267,10 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `user_name` (`user_name`)
+                        `id` int NOT NULL AUTO_INCREMENT,
+                        `user_name` varchar(25) DEFAULT NULL,
+                        PRIMARY KEY (`id`),
+                        UNIQUE KEY `user_name` (`user_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -293,4 +293,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 20:24:50
+-- Dump completed on 2024-03-13 21:11:04

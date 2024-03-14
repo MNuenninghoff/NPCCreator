@@ -3,6 +3,7 @@ package com.mnuenninghoff.persistence;
 import com.mnuenninghoff.entity.Ability;
 import com.mnuenninghoff.entity.InteractionTraits;
 import com.mnuenninghoff.entity.NPC;
+import com.mnuenninghoff.entity.User;
 import com.mnuenninghoff.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -57,7 +58,15 @@ class NPCDaoTest {
         assertNotNull(abilityDao.getById(1));
     }
 
+    @Test
+    void deleteUserAndNPCsDeleted(){
+        GenericDao<User> userDao = new GenericDao<User>(User.class);
+        userDao.delete(userDao.getById(1));
 
+        //Check that NPC ids 3 and 4 are null (should have been deleted when their user was deleted)
+        assertNull(npcDao.getById(3));
+        assertNull(npcDao.getById(4));
+    }
 
     @Test
     void insert() {
