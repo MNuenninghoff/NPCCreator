@@ -9,6 +9,6 @@
         <a class="nav-link" href="viewNPCs.jsp">View NPCs</a>
         <!-- TODO: set up so that login/login is displayed based on whether user is currently logged in/out -->
         <a class="nav-link" href="logIn">Login</a>
-        <a class="nav-link" href="logout.jsp">Logout</a>
+        <a class="nav-link" href="logOut">Logout</a>
     </div>
 </nav>
