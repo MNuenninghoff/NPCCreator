@@ -20,3 +20,9 @@ As a registered user, I want to view a previously created NPC
 
 **Create Villain**
 As a registered user, I want to randomly generate a villain template
+
+**Delete NPC***
+As a registered user, I want to delete a previously created NPC
+
+**Sign Out***
+As a logged in user, I want to sign out of my account
