@@ -8,18 +8,23 @@
 <body>
 <c:import url="navbar.jsp"/>
 <div class="container">
+    <br>
+    <h3>Edit NPC</h3>
     <div class="row">
         <table class="table">
-            <thead>
-                <th scope="col">Edit NPC</th>
-            </thead>
             <tbody>
                 <tr>
                     <th scope="row">Description</th>
-                    <td>
+                    <td colspan="2">
                         <form action="generateNPC" method="post">
-                            <input type="text" class="form-control" id="description" value="${npc.description}">
-                            <button type="submit" class="btn btn-primary" name="submit" value="updateDescription">Update Description</button>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="description" value="${npc.description}">
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary" name="submit" value="updateDescription">Update Description</button>
+                                </div>
+                            </div>
                         </form>
                     </td>
                 </tr>
@@ -29,6 +34,15 @@
                     <td>
                         <form action="generateNPC" method="post">
                             <button type="submit" class="btn btn-primary" name="submit" value="rerollName">Reroll Name</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Race</th>
+                    <td>${npc.race.race}</td>
+                    <td>
+                        <form action="generateNPC" method="post">
+                            <button type="submit" class="btn btn-primary" name="submit" value="rerollRace">Reroll Race</button>
                         </form>
                     </td>
                 </tr>
@@ -87,15 +101,6 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Race</th>
-                    <td>${npc.race.race}</td>
-                    <td>
-                        <form action="generateNPC" method="post">
-                            <button type="submit" class="btn btn-primary" name="submit" value="rerollRace">Reroll Race</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
                     <th scope="row">Talent</th>
                     <td>${npc.talent.talent}</td>
                     <td>
@@ -107,15 +112,19 @@
             </tbody>
         </table>
     </div>
-    <div class="row">
-        <form action="generateNPC" method="post">
-            <div class="col">
-                <button type="submit" class="btn btn-success" name="submit" value="saveNPC">Save NPC</button>
-            </div>
-            <div class="col">
-                <button type="submit" class="btn btn-danger" name="submit" value="deleteNPC">Delete NPC</button>
-            </div>
-        </form>
+    <div class="container text-center">
+        <div class="row">
+            <form action="generateNPC" method="post">
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" class="btn btn-success" name="submit" value="saveNPC">Save NPC</button>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-danger" name="submit" value="deleteNPC">Delete NPC</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
