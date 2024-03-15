@@ -19,7 +19,7 @@
                         <form action="generateNPC" method="post">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" id="description" value="${npc.description}">
+                                    <input type="text" class="form-control" name="description" value="${npc.description}">
                                 </div>
                                 <div class="col">
                                     <button type="submit" class="btn btn-primary" name="submit" value="updateDescription">Update Description</button>

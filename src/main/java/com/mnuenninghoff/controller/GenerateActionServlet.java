@@ -41,23 +41,45 @@ public class GenerateActionServlet extends HttpServlet {
         logger.debug("submit value: " + submit);
         if (submit.equals("generateNPC")) {
             npc = generateNewNPC(session);
-            // TODO: remove after done with debugging
             // Add npc to the session
-            logger.debug(npc);
             session.setAttribute("npc", npc);
             // forward to editNPC.jsp
-            RequestDispatcher dispatcher = request.getRequestDispatcher("editNPC.jsp");
-            dispatcher.forward(request, response);
+            forward(request, response, "editNPC.jsp");
         } else if (submit.equals("saveNPC")) {
             saveNPC(session);
             //TODO: redirect to viewNPC
+            forward(request, response, "editNPC.jsp");
         } else if (submit.equals("deleteNPC")) {
             deleteNPC(session);
             //TODO: redirect to home
+            forward(request, response, "index.jsp");
+        } else if (submit.equals("updateDescription")) {
+            String description = request.getParameter("description");
+            updateDescription(session, description);
+            forward(request, response, "editNPC.jsp");
         }
 
     }
 
+
+    private void updateDescription(HttpSession session, String description) {
+        NPC npcToUpdate = (NPC)session.getAttribute("npc");
+        npcToUpdate.setDescription(description);
+        session.setAttribute("npc", npcToUpdate);
+    }
+    /**
+     * forward to specified url
+     * @param request       HttpServletRequest
+     * @param response      HttpServletResponse
+     * @param url           url to forward to
+     * @throws ServletException ServletExcpetion
+     * @throws IOException      IOException
+     */
+    private void forward(HttpServletRequest request, HttpServletResponse response, String url)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+    }
     /**
      * Generates a new random NPC
      * @param session   HttpSession
