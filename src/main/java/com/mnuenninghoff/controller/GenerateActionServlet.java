@@ -82,6 +82,11 @@ public class GenerateActionServlet extends HttpServlet {
         List<Bond> bonds = bondDao.getAll();
         Bond randomBond = bonds.get(random.nextInt(bonds.size()));
         npc.setBond(randomBond);
+        // Flaw
+        GenericDao<Flaw> flawDao = new GenericDao<>(Flaw.class);
+        List<Flaw> flaws = flawDao.getAll();
+        Flaw randomFlaw = flaws.get(random.nextInt(flaws.size()));
+        npc.setFlaw(randomFlaw);
         // InteractionTraits
         GenericDao<InteractionTraits> interactionTraitsDao = new GenericDao<>(InteractionTraits.class);
         List<InteractionTraits> interactionTraits = interactionTraitsDao.getAll();
@@ -96,6 +101,7 @@ public class GenerateActionServlet extends HttpServlet {
         GenericDao<Race> raceDao = new GenericDao<>(Race.class);
         List<Race> races = raceDao.getAll();
         Race randomRace = races.get(random.nextInt(races.size()));
+        npc.setRace(randomRace);
         // Name
         IronArachneDao nameGenerator = new IronArachneDao();
         Name firstName = null;
@@ -112,6 +118,7 @@ public class GenerateActionServlet extends HttpServlet {
         GenericDao<Talent> talentDao = new GenericDao<>(Talent.class);
         List<Talent> talents = talentDao.getAll();
         Talent randomTalent = talents.get(random.nextInt(talents.size()));
+        npc.setTalent(randomTalent);
         // User
         if (session.getAttribute("user") != null) {
             npc.setUser((User)session.getAttribute("user"));
