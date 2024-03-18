@@ -93,18 +93,35 @@ need to get all of the Entity classes and Hibernate set up so I can start workin
 - F: 0.5
 - S: 4.5
 - S:
-- Total:
+- Total: 7.5
 
 This week I got all of the database tables implemented and the Entity Classes annotated with Hibernate.
 I also wrote tests for all of the Daos (the Generic Dao, set up for each Entity class). This filled out
 the requirements for the second project checkpoint.
 
 # Week 8
-- M:
-- T:
-- W:
-- T:
-- F:
-- S:
-- S:
-- Total:
+- M: 0
+- T: 0
+- W: 0
+- T: 0
+- F: 0
+- S: 3.5
+- S: 4.5
+- Total: 8
+
+This week I set up the web service to produce random names. I also began working on the jsps and controllers for
+generating a NPC
+
+# Week Spring Break
+- M: 0
+- T: 0
+- W: 0.5
+- T: 4
+- F: 0
+- S: 3.5
+- S: 2
+- Total: 10
+
+This week I implemented authentication using Cognito into the project. I also deployed the project onto AWS
+using elastic beanstalk. In addition, I continued to work on building out the generate and edit NPC controllers/jsps.
+I also began working on the viewNPCs.jsp to display all of a user's generated NPCs

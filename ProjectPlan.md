@@ -35,29 +35,35 @@ Focus: Daos and start JSPs
 # Week 7 - Security/Authentication - Checkpoint 2 due Wed
 - Checkpoint 2: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) 
   implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns).
-- [ ] Double check that all checkpoint 2 items are complete and visible in github
+- [x] Double check that all checkpoint 2 items are complete and visible in github
 - [x] Set up Authentication in project
-- [ ] Create project DB on AWS
-- [ ] Update project config files for AWS as needed
-- [ ] Deploy project to AWS
+- [x] Create project DB on AWS
+- [x] Update project config files for AWS as needed
+- [x] Deploy project to AWS
 - [ ] Add deployed link to project list in student repo
-- [ ] update weekly time log
+- [x] update weekly time log
 
 # Week 8 - Web Services Intro
 - [x] research possible APIs
 
 # Spring Break - Checkpoint 3 due next Wed
+- [x] update weely time log
 
 # Week 9 - RESTFul Web Services - Checkpoint 3 due Wed
 - Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented, 
   authentication implemented. Add link to your deployed application [here](https://github.com/mad-ent-java-s24/student/blob/main/IndividualProjects.md)
 - [ ] double check that all checkpoint 3 items are complete and visible in github
-- [ ] weekly reflection
+- [ ] complete the "reroll" paths in generateNPC
+- [ ] weekly timelog
 
 # Week 10 - Work Week
-- [ ] implement at least 1 web service consumed with java
+- [x] implement at least 1 web service consumed with java
+- [ ] complete viewNPCs jsp page
+- [ ] implement viewNPCDetails jsp page
+- [ ] weekly time log
 
 # Week 11 - Work Week
+- [ ] implement a search function on the viewNPCs jsp page
 
 # Week 12 - Team Project Presentations
 
