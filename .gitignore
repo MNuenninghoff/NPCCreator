@@ -48,6 +48,9 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+#.config
+*.config
+
 # Logs
 *.log
 .logs/*
