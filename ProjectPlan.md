@@ -40,7 +40,7 @@ Focus: Daos and start JSPs
 - [x] Create project DB on AWS
 - [x] Update project config files for AWS as needed
 - [x] Deploy project to AWS
-- [ ] Add deployed link to project list in student repo
+- [x] Add deployed link to project list in student repo
 - [x] update weekly time log
 
 # Week 8 - Web Services Intro
@@ -52,7 +52,7 @@ Focus: Daos and start JSPs
 # Week 9 - RESTFul Web Services - Checkpoint 3 due Wed
 - Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented, 
   authentication implemented. Add link to your deployed application [here](https://github.com/mad-ent-java-s24/student/blob/main/IndividualProjects.md)
-- [ ] double check that all checkpoint 3 items are complete and visible in github
+- [x] double check that all checkpoint 3 items are complete and visible in github
 - [ ] complete the "reroll" paths in generateNPC
 - [ ] weekly timelog
 
@@ -64,12 +64,19 @@ Focus: Daos and start JSPs
 
 # Week 11 - Work Week
 - [ ] implement a search function on the viewNPCs jsp page
+- [ ] weekly time log
 
 # Week 12 - Team Project Presentations
+- [ ] complete the editNPC page
+- [ ] weekly time log
 
 # Week 13 - Asynchronous Messaging
+- [ ] catch up on JSP work that has not been completed
+- [ ] weekly time log
 
 # Week 14 - Individual Project Code Reviews
+- [ ] catch up on JSP work that has not been completed
+- [ ] weekly time log
 
 # Week 15 - Work Week
 - [ ] implement feedback from week 14 review
