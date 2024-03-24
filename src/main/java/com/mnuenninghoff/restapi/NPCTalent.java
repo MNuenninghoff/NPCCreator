@@ -2,6 +2,8 @@ package com.mnuenninghoff.restapi;
 
 import com.mnuenninghoff.entity.Talent;
 import com.mnuenninghoff.persistence.GenericDao;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,6 +14,8 @@ import java.util.List;
 
 @Path("/talents")
 public class NPCTalent {
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     //Method to process HTTP GET requests
     @GET
@@ -49,8 +53,16 @@ public class NPCTalent {
 
         String output = "{";
         GenericDao<Talent> talentDao = new GenericDao<Talent>(Talent.class);
-        Talent talent = talentDao.getById(id);
-        output += "{\"id\":\"" + talent.getId() + ",\"" + talent.getTalent() + "\"}";
+        try {
+            Talent talent = talentDao.getById(id);
+            output += "{\"id\":\"" + talent.getId() + ",\"" + talent.getTalent() + "\"}";
+        } catch (NullPointerException nullPointer) {
+            logger.error("Error requesting Talent: " + id, nullPointer);
+            return Response.status(404).build();
+        } catch (Exception exception) {
+            logger.error("There was an error", exception);
+            return Response.status(404).build();
+        }
         output += "}";
 
         return Response.status(200).entity(output).build();
