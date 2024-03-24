@@ -5,7 +5,11 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-@ApplicationPath("/services")
+// Defines the base URI for all resource URIs
+@ApplicationPath("/services") // value added so that not all traffic is routed to this class
+/**
+ * Declares root resource and provider classes
+ */
 public class NPCApplication extends Application{
 
     @Override
