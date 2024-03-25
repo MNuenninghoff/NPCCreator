@@ -125,3 +125,16 @@ generating a NPC
 This week I implemented authentication using Cognito into the project. I also deployed the project onto AWS
 using elastic beanstalk. In addition, I continued to work on building out the generate and edit NPC controllers/jsps.
 I also began working on the viewNPCs.jsp to display all of a user's generated NPCs
+
+# Week 9
+- M: 0
+- T: 0
+- W: 0
+- T: 0
+- F: 0
+- S: 3.5
+- S: 3.5
+- Total: 7
+
+Unfortunately this week I made minimal progress on the Independent Project. My time working on Java was spent
+on the team project and week 9 activity/exercise.
