@@ -13,6 +13,7 @@
                 <th scope="col">Description</th>
                 <th scope="col">Name</th>
                 <th scope="col">Race</th>
+                <th scope="col">View Details</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,7 @@
                     <td>
                         ${npc.race.race}
                     </td>
+                    <td><a href="NPCdetails?id=${npc.id}">View Details</a></td>
                 </tr>
             </c:forEach>
         </tbody>
