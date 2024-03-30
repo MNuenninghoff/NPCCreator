@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="npc" items="${npcs}">
+            <c:forEach var="npc" items="${user.npcs}">
                 <tr>
                     <td>
                         ${npc.description}

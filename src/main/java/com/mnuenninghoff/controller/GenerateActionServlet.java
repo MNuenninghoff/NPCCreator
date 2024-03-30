@@ -57,11 +57,17 @@ public class GenerateActionServlet extends HttpServlet {
             String description = request.getParameter("description");
             updateDescription(session, description);
             forward(request, response, "editNPC.jsp");
+        } else if (submit.equals("rerollRace")) {
+            rerollRace(session);
+            forward(request, response, "editNPC.jsp");
         }
 
     }
 
+    private void rerollRace(HttpSession session) {
+        NPC npcToUpdate = (NPC)session.getAttribute("npc");
 
+    }
     private void updateDescription(HttpSession session, String description) {
         NPC npcToUpdate = (NPC)session.getAttribute("npc");
         npcToUpdate.setDescription(description);
@@ -80,6 +86,126 @@ public class GenerateActionServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
+
+    /**
+     * returns a random Ability
+     * @param random    Random object
+     * @return          Randomly selected Ability
+     */
+    private Ability rollAbility(Random random) {
+        GenericDao<Ability> abilityDao = new GenericDao<>(Ability.class);
+        List<Ability> abilities = abilityDao.getAll();
+        Ability randomAbility = abilities.get(random.nextInt(abilities.size()));
+
+        return randomAbility;
+    }
+
+    /**
+     * returns a random appearance
+     * @param random    Random object
+     * @return          randomly selected Appearance
+     */
+    private Appearance rollAppearance(Random random) {
+        GenericDao<Appearance> appearanceDao = new GenericDao<>(Appearance.class);
+        List<Appearance> appearances = appearanceDao.getAll();
+        Appearance randomAppearance = appearances.get(random.nextInt(appearances.size()));
+
+        return randomAppearance;
+    }
+
+    /**
+     * Returns a random Bond
+     * @param random    Random object
+     * @return          Randomly selected Bond
+     */
+    private Bond rollBond(Random random) {
+        GenericDao<Bond> bondDao = new GenericDao<>(Bond.class);
+        List<Bond> bonds = bondDao.getAll();
+        Bond randomBond = bonds.get(random.nextInt(bonds.size()));
+
+        return randomBond;
+    }
+
+    /**
+     * Returns a randomly selected Flaw
+     * @param random        Random object
+     * @return              Randomly selected Flaw
+     */
+    private Flaw rollFlaw(Random random) {
+        GenericDao<Flaw> flawDao = new GenericDao<>(Flaw.class);
+        List<Flaw> flaws = flawDao.getAll();
+        Flaw randomFlaw = flaws.get(random.nextInt(flaws.size()));
+
+        return randomFlaw;
+    }
+
+    /**
+     * Returns a randomly selected InteractionTraits
+     * @param random    Random object
+     * @return          Randomly selected InteractionTraits
+     */
+    private InteractionTraits rollInteractionTraits(Random random) {
+        GenericDao<InteractionTraits> interactionTraitsDao = new GenericDao<>(InteractionTraits.class);
+        List<InteractionTraits> interactionTraits = interactionTraitsDao.getAll();
+        InteractionTraits randomInteractionTraits = interactionTraits.get(random.nextInt(interactionTraits.size()));
+
+        return randomInteractionTraits;
+    }
+
+    /**
+     * Returns a randomly selected Mannerisms
+     * @param random        Random object
+     * @return              Randomly selected Mannerisms
+     */
+    private Mannerisms rollMannerisms(Random random) {
+        GenericDao<Mannerisms> mannerismsDao = new GenericDao<>(Mannerisms.class);
+        List<Mannerisms> mannerisms = mannerismsDao.getAll();
+        Mannerisms randomMannerism = mannerisms.get(random.nextInt(mannerisms.size()));
+
+        return randomMannerism;
+    }
+
+    /**
+     * Returns a randomly selected Race
+     * @param random    Random object
+     * @return          Randomly selected Race
+     */
+    private Race rollRace(Random random) {
+        GenericDao<Race> raceDao = new GenericDao<>(Race.class);
+        List<Race> races = raceDao.getAll();
+        Race randomRace = races.get(random.nextInt(races.size()));
+
+        return randomRace;
+    }
+
+    /**
+     * returns a randomly generated name
+     * @param random    Random object
+     * @param race      Race of desired name
+     * @return          String consisting of randomly generated first name + last name
+     */
+    private String rollName(Random random, Race race) {
+        IronArachneDao nameGenerator = new IronArachneDao();
+        Name firstName = null;
+        // randomly pick male/female first name
+        if (random.nextInt(2) == 0) {
+            firstName = nameGenerator.getMaleFirstName(race.getRace());
+        } else {
+            firstName = nameGenerator.getFemaleFirstName(race.getRace());
+        }
+        Name lastName = nameGenerator.getFamilyName(race.getRace());
+        String fullName = firstName.getNames().get(0) + " " + lastName.getNames().get(0);
+
+        return fullName;
+    }
+
+    private Talent rollTalent(Random random) {
+        GenericDao<Talent> talentDao = new GenericDao<>(Talent.class);
+        List<Talent> talents = talentDao.getAll();
+        Talent randomTalent = talents.get(random.nextInt(talents.size()));
+
+        return randomTalent;
+    }
     /**
      * Generates a new random NPC
      * @param session   HttpSession
@@ -90,62 +216,27 @@ public class GenerateActionServlet extends HttpServlet {
         Random random = new Random();
         // add random value for...
         // Ability
-        GenericDao<Ability> abilityDao = new GenericDao<>(Ability.class);
-        List<Ability> abilities = abilityDao.getAll();
-        Ability randomAbility = abilities.get(random.nextInt(abilities.size()));
-        npc.setAbility(randomAbility);
+        npc.setAbility(rollAbility(random));
         // Appearance
-        GenericDao<Appearance> appearanceDao = new GenericDao<>(Appearance.class);
-        List<Appearance> appearances = appearanceDao.getAll();
-        Appearance randomAppearance = appearances.get(random.nextInt(appearances.size()));
-        npc.setAppearance(randomAppearance);
+        npc.setAppearance(rollAppearance(random));
         // Bond
-        GenericDao<Bond> bondDao = new GenericDao<>(Bond.class);
-        List<Bond> bonds = bondDao.getAll();
-        Bond randomBond = bonds.get(random.nextInt(bonds.size()));
-        npc.setBond(randomBond);
+        npc.setBond(rollBond(random));
         // Flaw
-        GenericDao<Flaw> flawDao = new GenericDao<>(Flaw.class);
-        List<Flaw> flaws = flawDao.getAll();
-        Flaw randomFlaw = flaws.get(random.nextInt(flaws.size()));
-        npc.setFlaw(randomFlaw);
+        npc.setFlaw(rollFlaw(random));
         // InteractionTraits
-        GenericDao<InteractionTraits> interactionTraitsDao = new GenericDao<>(InteractionTraits.class);
-        List<InteractionTraits> interactionTraits = interactionTraitsDao.getAll();
-        InteractionTraits randomInteractionTraits = interactionTraits.get(random.nextInt(interactionTraits.size()));
-        npc.setInteractionTraits(randomInteractionTraits);
+        npc.setInteractionTraits(rollInteractionTraits(random));
         // Mannerisms
-        GenericDao<Mannerisms> mannerismsDao = new GenericDao<>(Mannerisms.class);
-        List<Mannerisms> mannerisms = mannerismsDao.getAll();
-        Mannerisms randomMannerism = mannerisms.get(random.nextInt(mannerisms.size()));
-        npc.setMannerisms(randomMannerism);
+        npc.setMannerisms(rollMannerisms(random));
         // Race
-        GenericDao<Race> raceDao = new GenericDao<>(Race.class);
-        List<Race> races = raceDao.getAll();
-        Race randomRace = races.get(random.nextInt(races.size()));
-        npc.setRace(randomRace);
+        npc.setRace(rollRace(random));
         // Name
-        IronArachneDao nameGenerator = new IronArachneDao();
-        Name firstName = null;
-        // randomly pick male/female first name
-        if (random.nextInt(2) == 0) {
-            firstName = nameGenerator.getMaleFirstName(randomRace.getRace());
-        } else {
-            firstName = nameGenerator.getFemaleFirstName(randomRace.getRace());
-        }
-        Name lastName = nameGenerator.getFamilyName(randomRace.getRace());
-        String fullName = firstName.getNames().get(0) + " " + lastName.getNames().get(0);
-        npc.setName(fullName);
+        npc.setName(rollName(random, npc.getRace()));
         // Talent
-        GenericDao<Talent> talentDao = new GenericDao<>(Talent.class);
-        List<Talent> talents = talentDao.getAll();
-        Talent randomTalent = talents.get(random.nextInt(talents.size()));
-        npc.setTalent(randomTalent);
+        npc.setTalent(rollTalent(random));
         // User
         if (session.getAttribute("user") != null) {
             npc.setUser((User)session.getAttribute("user"));
         }
-
         return npc;
     }
 
