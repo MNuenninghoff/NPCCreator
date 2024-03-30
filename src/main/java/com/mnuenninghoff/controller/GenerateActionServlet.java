@@ -39,29 +39,32 @@ public class GenerateActionServlet extends HttpServlet {
         // Check what submit button was clicked, call appropriate method
         String submit = request.getParameter("submit");
         logger.debug("submit value: " + submit);
-        if (submit.equals("generateNPC")) {
-            npc = generateNewNPC(session);
-            // Add npc to the session
-            session.setAttribute("npc", npc);
-            // forward to editNPC.jsp
-            forward(request, response, "editNPC.jsp");
-        } else if (submit.equals("saveNPC")) {
-            saveNPC(session);
-            //TODO: redirect to viewNPCdetails servlet
-            forward(request, response, "editNPC.jsp");
-        } else if (submit.equals("deleteNPC")) {
-            deleteNPC(session);
-            //TODO: redirect to home
-            forward(request, response, "index.jsp");
-        } else if (submit.equals("updateDescription")) {
-            String description = request.getParameter("description");
-            updateDescription(session, description);
-            forward(request, response, "editNPC.jsp");
-        } else if (submit.equals("rerollRace")) {
-            rerollAttribute(session, submit);
-            forward(request, response, "editNPC.jsp");
+        switch (submit) {
+            case "generateNPC":
+                npc = generateNewNPC(session);
+                // Add npc to the session
+                session.setAttribute("npc", npc);
+                // forward to editNPC.jsp
+                forward(request, response, "editNPC.jsp");
+                break;
+            case "saveNPC":
+                saveNPC(session);
+                //TODO: redirect to viewNPCdetails servlet
+                forward(request, response, "editNPC.jsp");
+                break;
+            case "deleteNPC":
+                deleteNPC(session);
+                forward(request, response, "index.jsp");
+                break;
+            case "updateDescription":
+                String description = request.getParameter("description");
+                updateDescription(session, description);
+                forward(request, response, "editNPC.jsp");
+                break;
+            default:
+                rerollAttribute(session, submit);
+                forward(request, response, "editNPC.jsp");
         }
-
     }
 
     /**
@@ -87,6 +90,9 @@ public class GenerateActionServlet extends HttpServlet {
                 break;
             case "rerollAppearance":
                 npcToUpdate.setAppearance(rollAppearance(random));
+                break;
+            case "rerollBond":
+                npcToUpdate.setBond(rollBond(random));
                 break;
             case "rerollFlaw":
                 npcToUpdate.setFlaw(rollFlaw(random));
