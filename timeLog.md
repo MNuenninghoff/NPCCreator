@@ -138,3 +138,14 @@ I also began working on the viewNPCs.jsp to display all of a user's generated NP
 
 Unfortunately this week I made minimal progress on the Independent Project. My time working on Java was spent
 on the team project and week 9 activity/exercise.
+
+# Week 10
+- M: 1
+- T: 0
+- W: 0.5
+- T: 0.75
+- F: 
+- S:
+- S:
+- Total
+
