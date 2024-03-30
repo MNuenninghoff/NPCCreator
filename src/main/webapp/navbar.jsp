@@ -3,7 +3,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <!-- TODO: set up so that current page is class="active"-->
-        <!-- TODO: set up so that when user not logged in, only "Home and Login" are visible in navbar -->
         <a class="navbar-brand" href="index.jsp">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,7 +21,6 @@
             </c:choose>
             </div>
         </div>
-        <!-- TODO: set up so that login/login is displayed based on whether user is currently logged in/out -->
 
     </div>
 </nav>
