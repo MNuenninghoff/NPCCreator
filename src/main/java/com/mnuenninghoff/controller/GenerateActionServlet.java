@@ -64,9 +64,15 @@ public class GenerateActionServlet extends HttpServlet {
 
     }
 
+    /**
+     * updates the npc in the session with a new randomly selected Race
+     * @param session       HttpSession object
+     */
     private void rerollRace(HttpSession session) {
+        Random random = new Random();
         NPC npcToUpdate = (NPC)session.getAttribute("npc");
-
+        npcToUpdate.setRace(rollRace(random));
+        session.setAttribute("npc", npcToUpdate);
     }
     private void updateDescription(HttpSession session, String description) {
         NPC npcToUpdate = (NPC)session.getAttribute("npc");
