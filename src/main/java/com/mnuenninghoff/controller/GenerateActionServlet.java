@@ -58,20 +58,40 @@ public class GenerateActionServlet extends HttpServlet {
             updateDescription(session, description);
             forward(request, response, "editNPC.jsp");
         } else if (submit.equals("rerollRace")) {
-            rerollRace(session);
+            rerollAttribute(session, submit);
             forward(request, response, "editNPC.jsp");
         }
 
     }
 
     /**
-     * updates the npc in the session with a new randomly selected Race
+     * updates the npc in the session given an attribute to update
      * @param session       HttpSession object
+     * @param attribute     String selecting which attribute should be rerolled
      */
-    private void rerollRace(HttpSession session) {
+    private void rerollAttribute(HttpSession session, String attribute) {
         Random random = new Random();
         NPC npcToUpdate = (NPC)session.getAttribute("npc");
-        npcToUpdate.setRace(rollRace(random));
+
+        // check what attribute needs to be rerolled
+        switch(attribute) {
+            case "rerollRace":
+                npcToUpdate.setRace(rollRace(random));
+            case "rerollName":
+                npcToUpdate.setName(rollName(random, npcToUpdate.getRace()));
+            case "rerollAbility":
+                npcToUpdate.setAbility(rollAbility(random));
+            case "rerollAppearance":
+                npcToUpdate.setAppearance(rollAppearance(random));
+            case "rerollFlaw":
+                npcToUpdate.setFlaw(rollFlaw(random));
+            case "rerollInteractionTraits":
+                npcToUpdate.setInteractionTraits(rollInteractionTraits(random));
+            case "rerollMannerisms":
+                npcToUpdate.setMannerisms(rollMannerisms(random));
+            case "rerollTalent":
+                npcToUpdate.setTalent(rollTalent(random));
+        }
         session.setAttribute("npc", npcToUpdate);
     }
     private void updateDescription(HttpSession session, String description) {
