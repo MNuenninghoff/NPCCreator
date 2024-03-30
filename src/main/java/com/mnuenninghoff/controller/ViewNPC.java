@@ -39,13 +39,14 @@ public class ViewNPC extends HttpServlet {
 
         HttpSession session = request.getSession();
         GenericDao<NPC> npcDao = new GenericDao<NPC>(NPC.class);
-        User user = (User)session.getAttribute("user");
+        int id = Integer.parseInt(request.getParameter("id"));
+
 
         // search database for all NPCs created by user. All the list of NPCs to the session
-        List<NPC> npcs = npcDao.findByPropertyEqual("user", user);
-        session.setAttribute("npcs", npcs);
+        List<NPC> npcs = npcDao.findByPropertyEqual("id", id);
+        session.setAttribute("npc", npcs.get(0));
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("viewNPCs.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("viewNPCdetails.jsp");
         dispatcher.forward(request, response);
     }
 }

@@ -15,7 +15,7 @@
                 </c:when>
                 <c:otherwise>
                         <a class="nav-link" href="generateNPC.jsp">Generate NPC</a>
-                        <a class="nav-link" href="viewNPC">View NPCs</a>
+                        <a class="nav-link" href="viewNPCs.jsp">View NPCs</a>
                         <a class="nav-link" href="logOut">Logout</a>
                 </c:otherwise>
             </c:choose>

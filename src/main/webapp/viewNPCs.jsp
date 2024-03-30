@@ -28,7 +28,7 @@
                     <td>
                         ${npc.race.race}
                     </td>
-                    <td><a href="NPCdetails?id=${npc.id}">View Details</a></td>
+                    <td><a href="viewNPC?id=${npc.id}">View Details</a></td>
                 </tr>
             </c:forEach>
         </tbody>
