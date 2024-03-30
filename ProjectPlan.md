@@ -53,8 +53,8 @@ Focus: Daos and start JSPs
 - Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented, 
   authentication implemented. Add link to your deployed application [here](https://github.com/mad-ent-java-s24/student/blob/main/IndividualProjects.md)
 - [x] double check that all checkpoint 3 items are complete and visible in github
-- [ ] complete the "reroll" paths in generateNPC
-- [ ] weekly timelog
+- [x] complete the "reroll" paths in generateNPC
+- [x] weekly timelog
 
 # Week 10 - Work Week
 - [x] implement at least 1 web service consumed with java
