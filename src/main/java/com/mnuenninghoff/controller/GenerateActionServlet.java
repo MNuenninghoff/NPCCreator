@@ -49,8 +49,7 @@ public class GenerateActionServlet extends HttpServlet {
                 break;
             case "saveNPC":
                 saveNPC(session);
-                //TODO: redirect to viewNPCdetails servlet
-                forward(request, response, "editNPC.jsp");
+                forward(request, response, "viewNPCdetails.jsp");
                 break;
             case "deleteNPC":
                 deleteNPC(session);
