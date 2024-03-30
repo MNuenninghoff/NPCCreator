@@ -74,23 +74,32 @@ public class GenerateActionServlet extends HttpServlet {
         NPC npcToUpdate = (NPC)session.getAttribute("npc");
 
         // check what attribute needs to be rerolled
+        logger.debug("rerollAttribute: " + attribute);
         switch(attribute) {
             case "rerollRace":
                 npcToUpdate.setRace(rollRace(random));
+                break;
             case "rerollName":
                 npcToUpdate.setName(rollName(random, npcToUpdate.getRace()));
+                break;
             case "rerollAbility":
                 npcToUpdate.setAbility(rollAbility(random));
+                break;
             case "rerollAppearance":
                 npcToUpdate.setAppearance(rollAppearance(random));
+                break;
             case "rerollFlaw":
                 npcToUpdate.setFlaw(rollFlaw(random));
+                break;
             case "rerollInteractionTraits":
                 npcToUpdate.setInteractionTraits(rollInteractionTraits(random));
+                break;
             case "rerollMannerisms":
                 npcToUpdate.setMannerisms(rollMannerisms(random));
+                break;
             case "rerollTalent":
                 npcToUpdate.setTalent(rollTalent(random));
+                break;
         }
         session.setAttribute("npc", npcToUpdate);
     }
