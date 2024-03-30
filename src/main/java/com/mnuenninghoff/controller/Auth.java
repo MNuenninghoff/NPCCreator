@@ -108,7 +108,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                     session.setAttribute("user", userDao.getById(newUserId));
                     logger.debug("User placed in session: " + userDao.getById(newUserId));
                 } else {
-                    logger.debug("More than one user found with user naeme \"" + userName +"\"");
+                    logger.debug("More than one user found with user name \"" + userName +"\"");
                     forwardLoginError(req, resp, session);
                 }
             } catch (IOException e) {
