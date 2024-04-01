@@ -144,8 +144,12 @@ on the team project and week 9 activity/exercise.
 - T: 0
 - W: 0.5
 - T: 0.75
-- F: 
-- S:
-- S:
-- Total
+- F: 2
+- S: 2.25
+- S: 3
+- Total: 9.5
+
+This week I worked on several of the jsps for the project. I built out the reroll functionality
+in edit.jsp. I also added a link from view NPCs to a details screen, from which the edit page
+can be accessed.
 
