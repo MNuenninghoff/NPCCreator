@@ -63,6 +63,8 @@ public class GenerateActionServlet extends HttpServlet {
             case "editNPC":
                 forward(request, response, "editNPC.jsp");
                 break;
+            case "viewNPCs":
+                forward(request, response, "viewNPCs.jsp");
             default:
                 rerollAttribute(session, submit);
                 forward(request, response, "editNPC.jsp");
