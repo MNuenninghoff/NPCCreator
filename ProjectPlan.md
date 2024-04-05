@@ -58,9 +58,9 @@ Focus: Daos and start JSPs
 
 # Week 10 - Work Week
 - [x] implement at least 1 web service consumed with java
-- [ ] complete viewNPCs jsp page
-- [ ] implement viewNPCDetails jsp page
-- [ ] weekly time log
+- [x] complete viewNPCs jsp page
+- [x] implement viewNPCDetails jsp page
+- [x] weekly time log
 
 # Week 11 - Work Week
 - [ ] implement a search function on the viewNPCs jsp page
