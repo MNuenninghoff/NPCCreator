@@ -298,6 +298,11 @@ public class GenerateActionServlet extends HttpServlet {
         } else {
             npcDao.insert(npcToSave);
         }
+        // update the user, so that the updated NPC will display on viewNPCs
+        GenericDao<User> userDao = new GenericDao<User>(User.class);
+        User currentUser = (User)session.getAttribute("user");
+        User updatedUser = userDao.getById(currentUser.getId());
+        session.setAttribute("user", updatedUser);
     }
 
     /**

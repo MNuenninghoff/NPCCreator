@@ -5,14 +5,14 @@
 <c:import url="head.jsp"/>
 <script type="text/javascript" class="init">
     $(document).ready( function () {
-        $('#userTable').DataTable();
+        $('#npcTable').DataTable();
     } );
 </script>
 <body>
 <c:import url="navbar.jsp"/>
 <div class="container">
     <h2>See Your Created NPCs!</h2>
-    <table id="userTable" class="table">
+    <table id="npcTable" class="table">
         <thead>
             <tr>
                 <th scope="col">Description</th>
