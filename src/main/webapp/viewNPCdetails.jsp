@@ -62,6 +62,7 @@
         <div class="row">
             <form action="generateNPC" method="post">
                 <div class="row">
+
                     <div class="col">
                         <button type="submit" class="btn btn-primary" name="submit" value="editNPC">Edit NPC</button>
                     </div>

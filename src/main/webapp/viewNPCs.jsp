@@ -3,11 +3,16 @@
 <html lang="en">
 <c:set var="title" scope="page" value="NPC Generator - View NPCs"/>
 <c:import url="head.jsp"/>
+<script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('#userTable').DataTable();
+    } );
+</script>
 <body>
 <c:import url="navbar.jsp"/>
 <div class="container">
     <h2>See Your Created NPCs!</h2>
-    <table class="table">
+    <table id="userTable" class="table">
         <thead>
             <tr>
                 <th scope="col">Description</th>
