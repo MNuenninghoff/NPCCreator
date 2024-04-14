@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
-<c:set var="title" scope="page" value="NPC Generator - View NPCs"/>
+<c:set var="title" scope="page" value="View NPCs - NPC Generator"/>
 <c:import url="head.jsp"/>
 <script type="text/javascript" class="init">
     $(document).ready( function () {

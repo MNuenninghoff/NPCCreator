@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html>
-<c:set var = "title" scope = "session" value = "Generate NPC"/>
+<c:set var = "title" scope = "session" value = "Generate NPC - NPC Creator"/>
 <c:import url="head.jsp"/>
 <body>
 <c:import url="navbar.jsp"/>

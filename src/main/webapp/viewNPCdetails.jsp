@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html>
-<c:set var = "title" scope = "session" value = "View NPC Details"/>
+<c:set var = "title" scope = "session" value = "NPC Details - NPC Generator"/>
 <c:import url="head.jsp"/>
 <body>
 <c:import url="navbar.jsp"/>
