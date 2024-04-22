@@ -28,9 +28,7 @@ Mannerisms, Interaction Traits, Bond, and Flaw**
   - MySQL 8.3
   - Hibernate ORM Version 6.4.3 Final
 - Web Services consumed using Java
-  - ??Mockaroo??
-  - ??muna.ironarachne.com name generator??
-    - https://muna.ironarachne.com/elf/?count=1&nameType=family
+  - muna.ironarachne.com name generator
 - Dependency Management
   - Maven
 - Logging
@@ -38,5 +36,5 @@ Mannerisms, Interaction Traits, Bond, and Flaw**
 - Hosting
   - AWS
 - CSS
-  - ??Bootstrap??
+  - Bootstrap
 - IDE: IntelliJ IDEA
