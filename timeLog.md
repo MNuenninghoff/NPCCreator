@@ -153,3 +153,40 @@ This week I worked on several of the jsps for the project. I built out the rerol
 in edit.jsp. I also added a link from view NPCs to a details screen, from which the edit page
 can be accessed.
 
+# Week 11
+- M: 0
+- T: 0
+- W: 1
+- T: 2
+- F: 2
+- S: 0
+- S: 0
+- Total: 5
+
+This week I focused on the team project. I also added search functionality in the npc creator project 
+by using a jQuery datatable to desplay a user's created NPCs
+
+# Week 12
+M: 0
+T: 0
+W: 2
+T: 0
+F: 0
+S: 1
+S: 3
+Total: 6
+
+This week the focus was on the team project presentation, and then providing feedback to other teams about
+their presentations! I also worked a little bit on the index page
+
+# Week 13
+M: 0
+T: 0
+W: 0
+T: 0
+F: 0
+S: 0
+S: 3
+
+This week I caught up on professional development presentations, and spent some time troubleshooting 
+the week 13 exercise.
