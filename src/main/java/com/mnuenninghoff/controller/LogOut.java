@@ -17,8 +17,8 @@ import java.util.Properties;
         urlPatterns = {"/logOut"}
 )
 
-/** Begins the authentication process using AWS Cognito
- *
+/**
+ *  Logs out user from application
  */
 public class LogOut extends HttpServlet implements PropertiesLoader {
 
@@ -28,8 +28,8 @@ public class LogOut extends HttpServlet implements PropertiesLoader {
      * Remove User object from session, redirect to the home page
      * @param req servlet request
      * @param resp servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException Servlet exception
+     * @throws IOException  IO exception
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

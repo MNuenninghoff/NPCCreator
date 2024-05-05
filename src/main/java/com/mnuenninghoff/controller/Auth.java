@@ -164,9 +164,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     /**
      * Get values out of the header to verify the token is legit. If it is legit, get the claims from it, such
      * as username.
-     * @param tokenResponse
-     * @return
-     * @throws IOException
+     * @param tokenResponse     token response from cognito
+     * @return                  user Name
+     * @throws IOException      IO Exception
      */
     private String validate(TokenResponse tokenResponse) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
@@ -210,9 +210,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
-        // TODO decide what you want to do with the info!
-        // for now, I'm just returning username for display back to the browser
-
+        // return userName
         return userName;
     }
 
