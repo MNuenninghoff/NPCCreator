@@ -113,6 +113,12 @@ public class GenerateActionServlet extends HttpServlet {
         }
         session.setAttribute("npc", npcToUpdate);
     }
+
+    /**
+     * Updates the NPC description
+     * @param session       HttpSession
+     * @param description   New description to replace prior NPC description
+     */
     private void updateDescription(HttpSession session, String description) {
         NPC npcToUpdate = (NPC)session.getAttribute("npc");
         npcToUpdate.setDescription(description);
@@ -243,7 +249,11 @@ public class GenerateActionServlet extends HttpServlet {
 
         return fullName;
     }
-
+    /**
+     * Returns a randomly selected talent
+     * @param random    Random object
+     * @return          randomly selected talent
+     */
     private Talent rollTalent(Random random) {
         GenericDao<Talent> talentDao = new GenericDao<>(Talent.class);
         List<Talent> talents = talentDao.getAll();
@@ -313,6 +323,10 @@ public class GenerateActionServlet extends HttpServlet {
         updateUser(session);
     }
 
+    /**
+     * Replaces the user in the session with an updated version of the user
+     * @param session   HttpSession
+     */
     private void updateUser(HttpSession session) {
         GenericDao<User> userDao = new GenericDao<User>(User.class);
         User currentUser = (User)session.getAttribute("user");

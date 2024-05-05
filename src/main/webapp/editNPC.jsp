@@ -9,7 +9,7 @@
 <c:import url="navbar.jsp"/>
 <div class="container">
     <br>
-    <h3>Edit NPC</h3>
+    <h1>Edit NPC</h1>
     <div class="row">
         <table class="table">
             <tbody>

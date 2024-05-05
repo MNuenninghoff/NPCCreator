@@ -14,6 +14,7 @@
 <body>
 <c:import url="navbar.jsp"/>
 <div class="container-md">
+    <h1>Generate NPC</h1>
     <form method="POST" action="generateNPC">
         <button type="submit" class="btn btn-primary" name="submit" value="generateNPC">Generate NPC</button>
     </form>

@@ -11,7 +11,7 @@
 <body>
 <c:import url="navbar.jsp"/>
 <div class="container">
-    <h2>See Your Created NPCs!</h2>
+    <h1>Your Created NPCs</h1>
     <table id="npcTable" class="table">
         <thead>
             <tr>
