@@ -95,9 +95,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", npcs=" + npcs +
-                '}';
+                ", userName='" + userName +
+                "}";
     }
 
     @Override

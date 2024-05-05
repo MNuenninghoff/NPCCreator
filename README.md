@@ -21,6 +21,8 @@ Building off of the NPC creation guide described in the Dungeons and Dragons 5th
 NPC Creator will generate a random NPC with characteristics for the **Name, Race, Appearance, Ability, Talent, 
 Mannerisms, Interaction Traits, Bond, and Flaw**
 
+[Video Demo](npcCreatorVideoDemo.mp4)
+
 # Project Technologies/Techniques
 - Security/Authentication:
   - AWS Cognito
