@@ -26,24 +26,26 @@ public class IronArachneDao implements PropertiesLoader {
         this.properties = loadProperties("/npcCreator.properties", logger);
     }
 
-    public Name getMaleFirstName(String race) {
-        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=male";
+    /**
+     * Returns a random name of a specified race and type (male/female/family)
+     * @param race      race (will default to human if a non-supported race is supplied)
+     * @param nameType  type of name (male/female/family)
+     * @return          name of specified race and type
+     */
+    public Name getName(String race, String nameType) {
+        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=" + nameType;
         logger.debug("API request URI: " + apiTargetString);
-        Name name = queryAPI(apiTargetString, "male");
+        Name name = queryAPI(apiTargetString, nameType);
         return name;
     }
-    public Name getFemaleFirstName(String race) {
-        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=female";
-        logger.debug("API request URI: " + apiTargetString);
-        Name name = queryAPI(apiTargetString,"female");
-        return name;
-    }
-    public Name getFamilyName(String race) {
-        String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=family";
-        logger.debug("API request URI: " + apiTargetString);
-        Name name = queryAPI(apiTargetString, "family");
-        return name;
-    }
+    /**
+     * Queries the IronArachne api using the passed targetString and returns the json object mapped
+     * as a name
+     * @param apiTargetString   api target string (e.g. https://muna.ironarachne.com/human/?count=1?nameType=family"
+     * @param nameType  Type of name to request (male/female/family). Needed in case original api query fails due to
+     *                  unsupported race.
+     * @return          Randomly generated name returned from ironarachne
+     */
     private Name queryAPI(String apiTargetString, String nameType) {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(apiTargetString);
