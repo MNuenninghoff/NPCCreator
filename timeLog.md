@@ -167,26 +167,34 @@ This week I focused on the team project. I also added search functionality in th
 by using a jQuery datatable to desplay a user's created NPCs
 
 # Week 12
-M: 0
-T: 0
-W: 2
-T: 0
-F: 0
-S: 1
-S: 3
+- M: 0
+- T: 0
+- W: 2
+- T: 0
+- F: 0
+- S: 1
+- S: 3
 Total: 6
 
 This week the focus was on the team project presentation, and then providing feedback to other teams about
 their presentations! I also worked a little bit on the index page
 
 # Week 13
-M: 0
-T: 0
-W: 0
-T: 0
-F: 0
-S: 0
-S: 3
+- M: 0
+- T: 0
+- W: 0
+- T: 0
+- F: 0
+- S: 0
+- S: 3
 
 This week I caught up on professional development presentations, and spent some time troubleshooting 
 the week 13 exercise.
+
+# Week 14/15
+
+For the final two weeks of the coures, I made some final tweaks. I updated the javadoc and caught up on
+updating some issues from prior code reviews. This was also when I realized that there were quite a few 
+things that I still wanted to add or improve (using a startup servlet, adding the ability for users to 
+put in custom attributes, etc.), but unfortunately the end of the semester caught up to me. I also did a 
+code review on a classmate's project.

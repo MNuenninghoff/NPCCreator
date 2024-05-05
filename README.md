@@ -31,10 +31,13 @@ Mannerisms, Interaction Traits, Bond, and Flaw**
   - muna.ironarachne.com name generator
 - Dependency Management
   - Maven
+- Testing
+  - JUnit version 5
 - Logging
   - Log4J2
 - Hosting
   - AWS
 - CSS
   - Bootstrap
-- IDE: IntelliJ IDEA
+- IDE
+  - IntelliJ IDEA
