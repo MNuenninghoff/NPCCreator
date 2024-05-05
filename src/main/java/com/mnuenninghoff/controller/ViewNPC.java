@@ -1,7 +1,6 @@
 package com.mnuenninghoff.controller;
 
 import com.mnuenninghoff.entity.NPC;
-import com.mnuenninghoff.entity.User;
 import com.mnuenninghoff.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Searches database for all NPCs created by a user, sends the returned list to
+ * Searches database for all NPCs created by a user, sends the returned list to viewNPCdetails.jsp
  */
 @WebServlet(
         name="viewNPC",
