@@ -76,8 +76,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * Gets the auth code from the request and exchanges it for a token containing user info.
      * @param req servlet request
      * @param resp servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet exception
+     * @throws IOException  IO exception
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
