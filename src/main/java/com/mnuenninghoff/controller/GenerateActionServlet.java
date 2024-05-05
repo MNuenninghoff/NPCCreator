@@ -240,11 +240,11 @@ public class GenerateActionServlet extends HttpServlet {
         Name firstName = null;
         // randomly pick male/female first name
         if (random.nextInt(2) == 0) {
-            firstName = nameGenerator.getMaleFirstName(race.getRace());
+            firstName = nameGenerator.getName(race.getRace(), "male");
         } else {
-            firstName = nameGenerator.getFemaleFirstName(race.getRace());
+            firstName = nameGenerator.getName(race.getRace(), "female");
         }
-        Name lastName = nameGenerator.getFamilyName(race.getRace());
+        Name lastName = nameGenerator.getName(race.getRace(), "family");
         String fullName = firstName.getNames().get(0) + " " + lastName.getNames().get(0);
 
         return fullName;
