@@ -34,7 +34,7 @@ public class IronArachneDao implements PropertiesLoader {
      */
     public Name getName(String race, String nameType) {
         String apiTargetString = properties.getProperty("IronArachneURI") + race + "/?count=1?nameType=" + nameType;
-        logger.debug("API request URI: " + apiTargetString);
+        logger.debug("getName API request URI: " + apiTargetString);
         Name name = queryAPI(apiTargetString, nameType);
         return name;
     }
