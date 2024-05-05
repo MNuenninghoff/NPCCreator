@@ -14,6 +14,9 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.Properties;
 
+/**
+ * DAO to access the IronArachne name generator (muna.ironarachne.com)
+ */
 public class IronArachneDao implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(this.getClass());

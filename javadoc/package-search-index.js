@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.mnuenninghoff.auth"},{"l":"com.mnuenninghoff.controller"},{"l":"com.mnuenninghoff.entity"},{"l":"com.mnuenninghoff.persistence"},{"l":"com.mnuenninghoff.restapi"},{"l":"com.mnuenninghoff.util"},{"l":"com.mnuenninghoff.utilities"}]

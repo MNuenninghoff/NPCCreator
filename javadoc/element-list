@@ -1,0 +1,8 @@
+unnamed package
+com.mnuenninghoff.auth
+com.mnuenninghoff.controller
+com.mnuenninghoff.entity
+com.mnuenninghoff.persistence
+com.mnuenninghoff.restapi
+com.mnuenninghoff.util
+com.mnuenninghoff.utilities
