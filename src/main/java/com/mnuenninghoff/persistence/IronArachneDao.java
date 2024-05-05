@@ -60,13 +60,13 @@ public class IronArachneDao implements PropertiesLoader {
             // (Human) and return a human name
             switch(nameType) {
                 case "male":
-                    name = getMaleFirstName("human");
+                    name = getName("human", "male");
                     return name;
                 case "female":
-                    name = getFemaleFirstName("human");
+                    name = getName("human", "female");
                     return name;
                 case "family":
-                    name = getFamilyName("human");
+                    name = getName("human", "family");
                     return name;
             }
         }
