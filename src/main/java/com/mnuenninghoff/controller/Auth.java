@@ -140,8 +140,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * Sends the request for a token to Cognito and maps the response
      * @param authRequest the request to the oauth2/token url in cognito
      * @return response from the oauth2/token endpoint which should include id token, access token and refresh token
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException      IO exception
+     * @throws InterruptedException Interrupted Exception
      */
     private TokenResponse getToken(HttpRequest authRequest) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
