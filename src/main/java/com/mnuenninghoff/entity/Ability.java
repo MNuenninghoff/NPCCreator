@@ -90,11 +90,21 @@ public class Ability {
     public void setAbility(String ability) {
         this.ability = ability;
     }
+
+    /**
+     * overrides toString method.
+     * @return  string representatino of ability
+     */
     public String toString() {
         String ability = "id: " + id + "ability: " + this.ability;
         return ability;
     }
 
+    /**
+     * overrides equals method
+     * @param o     object to compare to
+     * @return  true if object is equal
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
