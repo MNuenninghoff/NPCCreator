@@ -63,29 +63,28 @@ Focus: Daos and start JSPs
 - [x] weekly time log
 
 # Week 11 - Work Week
-- [ ] implement a search function on the viewNPCs jsp page
-- [ ] weekly time log
+- [x] implement a search function on the viewNPCs jsp page
+- [x] weekly time log
 
 # Week 12 - Team Project Presentations
-- [ ] complete the editNPC page
-- [ ] weekly time log
+- [x] complete the editNPC page
+- [x] weekly time log
 
 # Week 13 - Asynchronous Messaging
-- [ ] catch up on JSP work that has not been completed
-- [ ] weekly time log
+- [x] catch up on JSP work that has not been completed
+- [x] weekly time log
 
 # Week 14 - Individual Project Code Reviews
 - [ ] catch up on JSP work that has not been completed
 - [ ] weekly time log
 
 # Week 15 - Work Week
-- [ ] implement feedback from week 14 review
-- [ ] Final Presentation
-- [ ] Create video, add video link to readme.md
-- [ ] Finalize all documentation
-- [ ] code quality check
-- [ ] weekly journal entry
+- [x] implement feedback from week 14 review
+- [x] Final Presentation
+- [x] Create video, add video link to readme.md
+- [x] Finalize all documentation
+- [x] weekly journal entry
 
 # Week 16 - Individual Project Presentations - Project due 5/7
-- [ ] weekly time log
-- [ ] Final touches, submit project 
+- [x] weekly time log
+- [x] Final touches, submit project 
