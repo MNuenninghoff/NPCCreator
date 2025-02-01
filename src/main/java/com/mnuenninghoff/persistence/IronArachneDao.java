@@ -45,6 +45,7 @@ public class IronArachneDao implements PropertiesLoader {
      * Queries the IronArachne api using the passed targetString and returns the json object mapped
      * as a name
      * @param apiTargetString   api target string (e.g. https://muna.ironarachne.com/human/?count=1?nameType=family"
+     *                          looks like string has changed to https://names.ironarachne.com/race/raceHere/type/counthere
      * @param nameType  Type of name to request (male/female/family). Needed in case original api query fails due to
      *                  unsupported race.
      * @return          Randomly generated name returned from ironarachne
