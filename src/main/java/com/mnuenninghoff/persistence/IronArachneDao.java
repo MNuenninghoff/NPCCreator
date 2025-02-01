@@ -58,7 +58,7 @@ public class IronArachneDao implements PropertiesLoader {
         try {
             response = target.request(MediaType.APPLICATION_JSON).get(String.class);
             logger.debug(response);
-        } catch (NotFoundException notFound) {
+        } catch (Exception notFound) {
             logger.error("Web Resource Not Found");
             // If the name generator api returns a 404 not found error, retry with a race that is known to work
             // (Human) and return a human name
